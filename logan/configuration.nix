@@ -169,9 +169,6 @@
     # web
     firefox
 
-    # terminal
-    foot
-
     # network
     tailscale ## Switch to headscale
 
