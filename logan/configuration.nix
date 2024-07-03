@@ -184,7 +184,8 @@
 
     # code
     go
-    rustup
+    cargo
+    rustc
     gcc
     python3
     git
