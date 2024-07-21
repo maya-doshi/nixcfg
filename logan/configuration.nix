@@ -111,6 +111,19 @@
     #media-session.enable = true;
   };
 
+  virtualisation.containers.enable = true;
+  virtualisation = {
+    podman = {
+      enable = true;
+
+      # Create a `docker` alias for podman, to use it as a drop-in replacement
+      dockerCompat = true;
+
+      # Required for containers under podman-compose to be able to talk to each other.
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -188,6 +201,9 @@
     git
     upx
     onefetch
+    pkg-config
+    lua
+    openjdk
 
     # cli
     fish
@@ -219,6 +235,14 @@
     jq
     nvtopPackages.amd
     ffmpeg
+    openssl
+    direnv
+
+    dive # look into docker image layers
+    podman-tui # status of containers in the terminal
+    podman-compose # start group of containers for dev
+
+    distrobox
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -226,6 +250,7 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
+  programs.java.enable = true;
   # programs.gnupg.agent = {
   #   enable = true;
   #   enableSSHSupport = true;

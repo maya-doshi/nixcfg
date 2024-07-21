@@ -20,6 +20,7 @@
   home.packages = with pkgs; [
       # code
       vscodium
+      zed-editor
       lazygit
       gh
 
@@ -38,6 +39,8 @@
       strawberry
       spotifyd
       spotify-player
+      shortwave
+      picard
 
       # gaming
       steam
@@ -63,6 +66,8 @@
       # misc
       trayscale
       gnome.gnome-sound-recorder
+      sqlitebrowser
+      sqlite
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
