@@ -22,6 +22,7 @@
       vscodium
       zed-editor
       lazygit
+      ghc
       gh
 
       # security
