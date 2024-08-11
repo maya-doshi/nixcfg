@@ -24,6 +24,7 @@
       lazygit
       ghc
       gh
+      emacs29-pgtk
 
       # security
       bitwarden
