@@ -186,7 +186,6 @@
     tailscale ## Switch to headscale
 
     # file management
-    syncthing
     rclone
 
     # theme
@@ -260,7 +259,12 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  services.syncthing.enable = true;
+  services.syncthing = {
+    enable = true;
+    user = "maya";
+    dataDir = "/home/maya/";
+    configDir = "/home/maya/.config/syncthing/";
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
