@@ -28,6 +28,7 @@
 
       # security
       bitwarden
+      bitwarden-cli
       ## add a 2fa app
       # TODO - add a 2fa app
 
@@ -61,15 +62,30 @@
       signal-desktop
       webcord
 
+      # sway stuff
+      sway-contrib.grimshot
+      swaynotificationcenter
+      brightnessctl
+      pavucontrol
+      rofimoji
+      swaylock
+      wl-clipboard
+      nwg-displays
+      wdisplays
+
       # misc
       trayscale
       gnome.gnome-sound-recorder
       sqlitebrowser
       sqlite
+      ungoogled-chromium
+  ];
+
   imports = [
     ../modules/home/wm/waybar/waybar.nix
     ../modules/home/wm/foot.nix
     ../modules/home/wm/fuzzel.nix
+    ../modules/home/wm/sway/sway.nix
     ../modules/home/apps/sioyek.nix
     ../modules/home/apps/zathura.nix
   ];
@@ -112,4 +128,8 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  # services.emacs = {
+  #   enable = true;
+  #   package = pkgs.emacs29-pgtk;
+  # };
 }

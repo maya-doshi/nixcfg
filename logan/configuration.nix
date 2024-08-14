@@ -142,22 +142,6 @@
     vimAlias = true;
   };
 
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-    extraPackages = with pkgs; [
-      sway-contrib.grimshot
-      swaynotificationcenter
-      brightnessctl
-      pavucontrol
-      rofimoji
-      swaylock
-      wl-clipboard
-      nwg-displays
-      wdisplays
-    ];
-  };
-
   security.polkit.enable = true;
 
   fonts.packages = with pkgs; [
