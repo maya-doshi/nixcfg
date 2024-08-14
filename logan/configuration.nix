@@ -149,7 +149,6 @@
       waybar
       sway-contrib.grimshot
       swaynotificationcenter
-      fuzzel
       brightnessctl
       pavucontrol
       rofimoji

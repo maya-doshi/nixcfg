@@ -72,6 +72,7 @@
       sqlite
   imports = [
     ../modules/home/wm/foot.nix
+    ../modules/home/wm/fuzzel.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
