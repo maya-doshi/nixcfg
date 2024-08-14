@@ -134,6 +134,9 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  # So it shows up in the display manager?
+  programs.sway.enable = true;
+
   # Install neovim
   programs.neovim = {
     enable = true;

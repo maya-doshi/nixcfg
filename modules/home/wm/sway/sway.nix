@@ -10,6 +10,7 @@
   wayland.windowManager.sway = let
     mod = "Mod4";
     term = "footclient";
+    termServer = "foot --server";
     web = "firefox";
     menu = "fuzzel";
     clipboard = "wl-copy";
@@ -23,20 +24,22 @@
 
     screenshot_select = "grimshot --notify copy area";
     screenshot_select_save = "grimshot --notify save area";
-    screenshot_copy = "grimshot --notify copy screen";
-    screenshot_copy_save = "grimshot --notify save screen";
+    screenshot_all = "grimshot --notify copy screen";
+    screenshot_all_save = "grimshot --notify save screen";
 
     notify = "swaync";
   in {
     enable = true;
     wrapperFeatures.gtk = true;
     checkConfig = false; # TODO: remove this once you figure out how to set the wallpaper properly
+    systemd.enable = true;
     config = {
       modifier = "${mod}";
       terminal = "${term}";
       menu = "${menu}";
 
       startup = [
+        {command = "${termServer}";}
         {command = "${notify}";}
       ];
 
@@ -45,6 +48,8 @@
         titlebar = false;
         hideEdgeBorders = "smart";
       };
+
+      defaultWorkspace = "workspace number 1";
 
       focus = {
         followMouse = "always";
@@ -156,6 +161,8 @@
         # Screenshot
         "${mod}+p" = "exec ${screenshot_select}";
         "${mod}+Shift+p" = "exec ${screenshot_select_save}";
+        "${mod}+Control+p" = "exec ${screenshot_all}";
+        "${mod}+Control+Shift+p" = "exec ${screenshot_all_save}";
 
         # Sway Commands
         "${mod}+Shift+q" = "kill";
