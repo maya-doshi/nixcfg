@@ -48,9 +48,6 @@
       steam
       prismlauncher
 
-      # pdf
-      zathura
-
       # image
       gimp
 
@@ -74,6 +71,7 @@
     ../modules/home/wm/foot.nix
     ../modules/home/wm/fuzzel.nix
     ../modules/home/apps/sioyek.nix
+    ../modules/home/apps/zathura.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
