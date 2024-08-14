@@ -70,6 +70,7 @@
       sqlitebrowser
       sqlite
   imports = [
+    ../modules/home/wm/waybar/waybar.nix
     ../modules/home/wm/foot.nix
     ../modules/home/wm/fuzzel.nix
     ../modules/home/apps/sioyek.nix

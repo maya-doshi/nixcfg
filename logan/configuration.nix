@@ -146,7 +146,6 @@
     enable = true;
     wrapperFeatures.gtk = true;
     extraPackages = with pkgs; [
-      waybar
       sway-contrib.grimshot
       swaynotificationcenter
       brightnessctl
