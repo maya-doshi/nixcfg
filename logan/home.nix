@@ -50,7 +50,6 @@
 
       # pdf
       zathura
-      sioyek
 
       # image
       gimp
@@ -73,6 +72,7 @@
   imports = [
     ../modules/home/wm/foot.nix
     ../modules/home/wm/fuzzel.nix
+    ../modules/home/apps/sioyek.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
