@@ -33,7 +33,6 @@
       # TODO - add a 2fa app
 
       # docs
-      qownnotes
       libreoffice
       obsidian
 
@@ -82,7 +81,7 @@
   ];
 
   imports = [
-    ../modules
+    ../../modules
   ];
 
   maya.apps = {
