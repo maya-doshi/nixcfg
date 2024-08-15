@@ -81,7 +81,7 @@
   ];
 
   imports = [
-    ../../modules
+    ../../homeManagerModules
   ];
 
   maya.apps = {
