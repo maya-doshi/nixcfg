@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 
 # TODO:
-# - [ ] Add Floating criteria
 # - [ ] Move sway stuff packages in here
 # - [ ] Import foot and other modules in here
 # - [ ] Bind extra keys
@@ -265,7 +264,38 @@
           Return = "mode default";
         };
       };
+
+      floating = {
+        modifier = "${mod}";
+        titlebar = false;
+        criteria = [
+          { window_role = "pop-up"; }
+          { window_role = "Pop-up"; }
+          { window_role = "bubble"; }
+          { window_role = "Bubble"; }
+          { window_role = "dialogue"; }
+          { window_role = "Dialogue"; }
+          { window_role = "task_dialog"; }
+          { window_role = "About"; }
+
+          { class = "dialog"; }
+          { class = "Dialog"; }
+
+          { app_id = "pavucontrol"; }
+          { app_id = "xdg-desktop-portal-*"; }
+          { app_id = "org.telegram.desktop"; }
+          { app_id = "org.gnome.clocks"; }
+          { app_id = "org.gnome.Nautilus"; }
+
+          { app_id = "firefox"; title = "Firefox - Sharing Indicator"; }
+          { app_id = "firefox"; title = "Picture-in-Picture"; }
+          { app_id = "thunderbird"; title = "New*"; }
+
+          { title = "Steam - News"; }
+        ];
+      };
     };
+
     extraConfig = let
       brightness_up = "brightnessctl set 5%+";
       brightness_down = "brightnessctl set 5%-";
