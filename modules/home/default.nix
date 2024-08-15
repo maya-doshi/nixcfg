@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./options.nix
     ./apps
     ./wm
   ];

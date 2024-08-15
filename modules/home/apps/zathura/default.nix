@@ -1,8 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  options.maya.apps.zathura.enable = lib.mkEnableOption "Enable Zathura";
-
   config = lib.mkIf config.maya.apps.zathura.enable {
     programs.zathura = {
       enable = true;

@@ -1,8 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  options.maya.apps.waybar.enable = lib.mkEnableOption "Enable Waybar";
-
   config = lib.mkIf config.maya.apps.waybar.enable {
     programs.waybar = {
       enable = true;

@@ -6,8 +6,6 @@
 # - [ ] Bind extra keys
 
 {
-  options.maya.windowManager.sway.enable = lib.mkEnableOption "Enable SwayWM";
-
   config = lib.mkIf config.maya.windowManager.sway.enable {
     wayland.windowManager.sway = let
       mod = "Mod4";

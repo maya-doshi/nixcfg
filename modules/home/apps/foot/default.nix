@@ -1,8 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  options.maya.apps.foot.enable = lib.mkEnableOption "Enable Foot Terminal";
-
   config = lib.mkIf config.maya.apps.foot.enable {
     programs.foot = {
       enable = true;

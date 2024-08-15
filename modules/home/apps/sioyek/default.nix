@@ -1,8 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  options.maya.apps.sioyek.enable = lib.mkEnableOption "Enable Sioyek";
-
   config = lib.mkIf config.maya.apps.sioyek.enable {
     programs.sioyek = {
       enable = true;

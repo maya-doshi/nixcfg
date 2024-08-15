@@ -1,8 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  options.maya.apps.fuzzel.enable = lib.mkEnableOption "Enable Fuzzel";
-
   config = lib.mkIf config.maya.apps.fuzzel.enable {
     programs.fuzzel = {
       enable = true;
