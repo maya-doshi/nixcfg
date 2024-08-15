@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../nixosModules
     ];
 
   nixpkgs = {
@@ -247,12 +248,7 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  services.syncthing = {
-    enable = true;
-    user = "maya";
-    dataDir = "/home/maya/";
-    configDir = "/home/maya/.config/syncthing/";
-  };
+  maya.services.syncthing.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
