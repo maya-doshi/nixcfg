@@ -82,8 +82,7 @@
   ];
 
   imports = [
-    ../modules/home/wm/sway/sway.nix
-    ../modules/home/apps
+    ../modules
   ];
 
   maya.apps = {
@@ -93,6 +92,8 @@
     fuzzel.enable = true;
     waybar.enable = true;
   };
+
+  maya.windowManager.sway.enable = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
