@@ -82,13 +82,17 @@
   ];
 
   imports = [
-    ../modules/home/wm/waybar/waybar.nix
-    ../modules/home/wm/foot.nix
-    ../modules/home/wm/fuzzel.nix
     ../modules/home/wm/sway/sway.nix
-    ../modules/home/apps/sioyek.nix
-    ../modules/home/apps/zathura.nix
+    ../modules/home/apps
   ];
+
+  maya.apps = {
+    sioyek.enable = true;
+    zathura.enable = true;
+    foot.enable = true;
+    fuzzel.enable = true;
+    waybar.enable = true;
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
