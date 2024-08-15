@@ -92,12 +92,10 @@ window#waybar {
 
 #clock {
   color: @lavender;
-  padding-bottom: 2px;
 }
 
 #battery {
   color: @green;
-  padding-bottom: 2px;
 }
 
 #battery.charging {
@@ -114,7 +112,6 @@ window#waybar {
 
 #backlight {
   color: @yellow;
-  padding-bottom: 2px;
 }
 
 #pulseaudio {
