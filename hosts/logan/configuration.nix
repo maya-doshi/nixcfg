@@ -113,6 +113,8 @@
 
   virtualisation.containers.enable = true;
   virtualisation = {
+    libvirtd.enable = true;
+
     podman = {
       enable = true;
 
@@ -131,7 +133,7 @@
   users.users.maya = {
     isNormalUser = true;
     description = "maya";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
   };
 
   # So it shows up in the display manager?
@@ -221,6 +223,7 @@
     ffmpeg
     openssl
     direnv
+    virt-manager
 
     dive # look into docker image layers
     podman-tui # status of containers in the terminal
