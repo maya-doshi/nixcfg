@@ -287,6 +287,7 @@
             { app_id = "org.telegram.desktop"; }
             { app_id = "org.gnome.clocks"; }
             { app_id = "org.gnome.Nautilus"; }
+            { app_id = "dev.deedles.Trayscale"; }
 
             { app_id = "firefox"; title = "Firefox - Sharing Indicator"; }
             { app_id = "firefox"; title = "Picture-in-Picture"; }
