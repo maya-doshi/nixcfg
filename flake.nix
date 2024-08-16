@@ -19,7 +19,7 @@
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.maya = import ./hosts/logan/home.nix;
+              home-manager.users.maya = import ./homes/maya/laptop.nix;
             }
           ];
         };
@@ -31,7 +31,7 @@
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.maya = import ./hosts/richard/home.nix;
+              home-manager.users.maya = import ./homes/maya/laptop.nix;
             }
           ];
         };
