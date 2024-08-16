@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }: {
-  options.maya = {
+  options.haze = {
     services = {
       syncthing.enable = lib.mkEnableOption "Syncthing - File Sync";
     };

@@ -6,7 +6,7 @@
 # - [ ] Bind extra keys
 
 {
-  config = lib.mkIf config.maya.windowManager.sway.enable {
+  config = lib.mkIf config.haze.windowManager.sway.enable {
     wayland.windowManager.sway = let
       mod = "Mod4";
       term = "footclient";

@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  config = lib.mkIf config.maya.apps.foot.enable {
+  config = lib.mkIf config.haze.apps.foot.enable {
     programs.foot = {
       enable = true;
       server.enable = true;

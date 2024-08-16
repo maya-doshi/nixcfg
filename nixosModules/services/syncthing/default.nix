@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }: {
-  config = lib.mkIf config.maya.services.syncthing.enable {
+  config = lib.mkIf config.haze.services.syncthing.enable {
     services.syncthing = {
       enable = true;
       user = "maya";

@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  config = lib.mkIf config.maya.apps.fuzzel.enable {
+  config = lib.mkIf config.haze.apps.fuzzel.enable {
     programs.fuzzel = {
       enable = true;
       settings = {

@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  config = lib.mkIf config.maya.apps.waybar.enable {
+  config = lib.mkIf config.haze.apps.waybar.enable {
     programs.waybar = {
       enable = true;
       style = ./style.css;

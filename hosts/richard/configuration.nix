@@ -244,7 +244,7 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  maya.services.syncthing.enable = true;
+  haze.services.syncthing.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

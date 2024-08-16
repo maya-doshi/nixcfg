@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  config = lib.mkIf config.maya.apps.sioyek.enable {
+  config = lib.mkIf config.haze.apps.sioyek.enable {
     programs.sioyek = {
       enable = true;
       # Just gruvbox

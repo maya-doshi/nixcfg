@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  config = lib.mkIf config.maya.apps.zathura.enable {
+  config = lib.mkIf config.haze.apps.zathura.enable {
     programs.zathura = {
       enable = true;
 

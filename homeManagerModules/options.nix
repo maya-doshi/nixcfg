@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }: {
-  options.maya = {
+  options.haze = {
     apps = {
       foot.enable = lib.mkEnableOption "foot - Terminal";
       fuzzel.enable = lib.mkEnableOption "Fuzzel - Launcher";
