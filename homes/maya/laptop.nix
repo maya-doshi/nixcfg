@@ -70,7 +70,6 @@
       wdisplays
 
       # misc
-      trayscale
       gnome.gnome-sound-recorder
       sqlitebrowser
       sqlite

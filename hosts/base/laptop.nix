@@ -29,10 +29,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Tailscale
-  services.tailscale.enable = true;
-  services.tailscale.useRoutingFeatures = "client";
-
   # Set your time zone.
   time.timeZone = "America/New_York";
 
@@ -154,9 +150,6 @@
     # web
     firefox
 
-    # network
-    tailscale ## Switch to headscale
-
     # file management
     rclone
 
@@ -232,7 +225,10 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  haze.services.syncthing.enable = true;
+  haze.services = {
+    syncthing.enable = true;
+    tailscale.enable = true;
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
