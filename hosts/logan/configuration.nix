@@ -7,6 +7,9 @@
     ./hardware-configuration.nix
   ];
 
+  # Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   networking.hostName = "logan";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
