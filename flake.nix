@@ -37,6 +37,18 @@
             nixos-hardware.nixosModules.lenovo-thinkpad-x220
           ];
         };
+
+        oliver = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/oliver/configuration.nix
+            home-manager.nixosModules.home-manager {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.maya = import ./homes/maya/laptop.nix;
+            }
+          ];
+        };
       };
     };
 }
