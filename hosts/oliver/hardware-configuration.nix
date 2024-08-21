@@ -13,6 +13,29 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+  };
+
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia = {
+    modesetting.enable = true;
+
+    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
+    # Enable this if you have graphical corruption issues or application crashes after waking
+    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
+    # of just the bare essentials.
+    powerManagement.enable = false;
+
+    powerManagement.finegrained = false;
+
+    open = true;
+
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/239f07cc-2af4-4572-adee-fb831bc954a8";
       fsType = "ext4";
