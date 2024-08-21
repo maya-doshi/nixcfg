@@ -9,7 +9,7 @@
         main = {
           term = "xterm-256color";
           shell = "fish";
-          font = "JetBrainsMono Nerd Font:size=12";
+          font = config.haze.apps.foot.font;
           dpi-aware = "no";
           workers = 12;
         };

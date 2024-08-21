@@ -32,7 +32,7 @@
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.maya = import ./homes/maya/laptop.nix;
+              home-manager.users.maya = import ./homes/maya/richard.nix;
             }
             nixos-hardware.nixosModules.lenovo-thinkpad-x220
           ];
