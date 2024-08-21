@@ -166,7 +166,7 @@
 
           # Sway Commands
           "${mod}+Shift+q" = "kill";
-          "${mod}+Shift+c" = "reload";
+          "${mod}+Shift+r" = "reload";
           "${mod}+Shift+e" = "exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'";
 
           # Movement
@@ -213,6 +213,7 @@
           "${mod}+m" = "workspace 󰝚";
           "${mod}+t" = "workspace ";
           "${mod}+n" = "workspace ";
+          "${mod}+c" = "workspace ";
           ## Move focused container
           "${mod}+Shift+1" = "move container to workspace number 1";
           "${mod}+Shift+2" = "move container to workspace number 2";
@@ -227,6 +228,7 @@
           "${mod}+Shift+m" = "move container to workspace 󰝚";
           "${mod}+Shift+t" = "move container to workspace ";
           "${mod}+Shift+n" = "move container to workspace ";
+          "${mod}+Shift+c" = "move container to workspace ";
 
           # Scratchpad
           "${mod}+Shift+minus" = "move scratchpad";
