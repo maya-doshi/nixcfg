@@ -12,6 +12,8 @@
 
   networking.hostName = "logan";
 
+  services.udev.packages = [ pkgs.dolphin-emu ];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.maya = {
     isNormalUser = true;
