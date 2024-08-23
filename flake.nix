@@ -4,11 +4,17 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.05";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager/release-24.05";
+    };
+    agenix = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:ryantm/agenix";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, agenix, ... }:
     let
       lib = nixpkgs.lib;
     in {
@@ -22,6 +28,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.maya = import ./homes/logan.nix;
             }
+            agenix.nixosModules.default
           ];
         };
 
@@ -35,6 +42,10 @@
               home-manager.users.maya = import ./homes/maya/richard.nix;
             }
             nixos-hardware.nixosModules.lenovo-thinkpad-x220
+            agenix.nixosModules.default
+            {
+              environment.systemPackages = [ agenix.packages.x86_64-linux.default ];
+            }
           ];
         };
 
@@ -47,6 +58,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.maya = import ./homes/maya/laptop.nix;
             }
+            agenix.nixosModules.default
           ];
         };
       };
