@@ -9,7 +9,6 @@
         mainBar = {
           "layer" = "top";
           "position" = "top";
-          "height" = 24;
           "margin" = "0, 0, 0, 0";
           "ipc" = true;
 
@@ -41,11 +40,11 @@
             "format-icons" = ["" "" "" "" "" "" "" "" ""];
           };
           "pulseaudio" = {
-            "format" = "{volume}% {icon} {format_source}";
-            "format-bluetooth" = "{volume}% {icon} {format_source}";
-            "format-bluetooth-muted" = " {icon} {format_source}";
-            "format-muted" = "  {format_source}";
-            "format-source" = "{volume}% ";
+            "format" = "{format_source} {volume}% {icon}";
+            "format-bluetooth" = "{format_source} {volume}% {icon}";
+            "format-bluetooth-muted" = "{format_source}  {icon}";
+            "format-muted" = "{format_source}  ";
+            "format-source" = "";
             "format-source-muted" = "";
             "format-icons" = {
               "headphone" = "󰋋";
