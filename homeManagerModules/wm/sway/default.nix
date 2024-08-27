@@ -290,6 +290,7 @@
             { app_id = "org.gnome.clocks"; }
             { app_id = "org.gnome.Nautilus"; }
             { app_id = "org.gnome.Snapshot"; }
+            { app_id = "org.gnome.Fractal"; }
             { app_id = "dev.deedles.Trayscale"; }
             { app_id = ".blueman-manager-wrapped"; }
 

@@ -55,6 +55,7 @@
       thunderbird
       protonmail-bridge
       telegram-desktop
+      fractal
       signal-desktop
       webcord
 
