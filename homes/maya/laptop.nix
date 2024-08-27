@@ -75,6 +75,7 @@
       sqlitebrowser
       sqlite
       ungoogled-chromium
+      planify
   ];
 
   imports = [
