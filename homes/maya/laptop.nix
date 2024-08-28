@@ -39,6 +39,7 @@
       # music
       nicotine-plus
       strawberry
+      spotify
       spotifyd
       spotify-player
       shortwave
