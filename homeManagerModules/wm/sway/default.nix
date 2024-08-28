@@ -125,7 +125,6 @@
             pos = "320 1440";
             transform = "normal";
             scale = "1.50";
-            scale_filter = "linear";
             adaptive_sync = "off";
             dpms = "on";
           };
@@ -134,7 +133,6 @@
             pos = "0 0";
             transform = "normal";
             scale = "1.50";
-            scale_filter = "nearest";
             adaptive_sync = "off";
             dpms = "on";
           };
