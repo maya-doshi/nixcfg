@@ -1,11 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./maya/laptop.nix
-  ];
-
-  home.packages = with pkgs; [
-    steam
-  ];
+  imports = [ ./maya/laptop.nix ];
 }

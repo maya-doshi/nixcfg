@@ -5,6 +5,7 @@
       tailscale.enable = lib.mkEnableOption "Tailscale - Split VPN";
     };
     gaming = {
+      steam.enable = lib.mkEnableOption "Steam";
       emu = {
         dolphin = {
           enable = lib.mkEnableOption "Enable Wii/GC emulation";

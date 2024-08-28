@@ -12,9 +12,12 @@
 
   networking.hostName = "logan";
 
-  haze.gaming.emu.dolphin ={
-    enable = true;
-    gc-oc = true;
+  haze.gaming = {
+    steam.enable = true;
+    emu.dolphin = {
+      enable = true;
+      gc-oc = true;
+    };
   };
 
   services.flatpak.enable = true;
