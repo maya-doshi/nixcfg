@@ -292,6 +292,7 @@
             { app_id = "dev.deedles.Trayscale"; }
             { app_id = "io.github.alainm23.planify"; }
             { app_id = ".blueman-manager-wrapped"; }
+            { app_id = "Bitwarden"; }
 
             { app_id = "firefox"; title = "Firefox - Sharing Indicator"; }
             { app_id = "firefox"; title = "Picture-in-Picture"; }
