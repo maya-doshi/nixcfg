@@ -9,3 +9,4 @@
 - [ ] Enable flatpak properly with flathub
 - [ ] Sway
   - [ ] Add all required programs for swaycfg in module
+- [ ] Github actions
