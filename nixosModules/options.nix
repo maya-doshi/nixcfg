@@ -4,5 +4,13 @@
       syncthing.enable = lib.mkEnableOption "Syncthing - File Sync";
       tailscale.enable = lib.mkEnableOption "Tailscale - Split VPN";
     };
+    gaming = {
+      emu = {
+        dolphin = {
+          enable = lib.mkEnableOption "Enable Wii/GC emulation";
+          gc-oc = lib.mkEnableOption "GC Adapter Overclock kernel modules";
+        };
+      };
+    };
   };
 }

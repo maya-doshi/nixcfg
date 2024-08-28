@@ -12,7 +12,10 @@
 
   networking.hostName = "logan";
 
-  services.udev.packages = [ pkgs.dolphin-emu ];
+  haze.gaming.emu.dolphin ={
+    enable = true;
+    gc-oc = true;
+  };
 
   services.flatpak.enable = true;
 

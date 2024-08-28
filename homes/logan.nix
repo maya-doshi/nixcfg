@@ -7,6 +7,5 @@
 
   home.packages = with pkgs; [
     steam
-    dolphin-emu
   ];
 }

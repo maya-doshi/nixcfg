@@ -7,5 +7,6 @@
   imports = [
     ./options.nix
     ./services
+    ./gaming
   ];
 }
