@@ -20,7 +20,6 @@
   home.packages = with pkgs; [
       # code
       vscodium
-      zed-editor
       lazygit
       ghc
       gh
