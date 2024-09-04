@@ -96,6 +96,8 @@
 
         bars = [{command = "${bar}";}];
 
+        seat."*".xcursor_theme = "Adwaita 24";
+
         input = {
           "type:touchpad" = {
             dwt = "enabled";
