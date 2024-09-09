@@ -12,6 +12,8 @@
 
   networking.hostName = "logan";
 
+  zramSwap.enable = true;
+
   haze.gaming = {
     steam.enable = true;
     emu.dolphin = {
