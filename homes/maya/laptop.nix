@@ -19,7 +19,6 @@
   # environment.
   home.packages = with pkgs; [
       # code
-      vscodium
       lazygit
       ghc
       gh

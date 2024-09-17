@@ -7,5 +7,6 @@
     # Handwriting
     xournalpp
     rnote
+    vscode
   ];
 }
