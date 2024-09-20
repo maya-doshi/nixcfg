@@ -70,6 +70,7 @@
       wdisplays
 
       # misc
+      ddcutil
       gnome.gnome-sound-recorder
       sqlitebrowser
       sqlite

@@ -10,7 +10,7 @@
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" "amd-gpu" "zenpower" ];
+  boot.kernelModules = [ "kvm-amd" "amd-gpu" "zenpower" "i2c-dev" ];
   boot.extraModulePackages = [ ];
 
   hardware.opengl = {
