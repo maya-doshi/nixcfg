@@ -7,6 +7,9 @@
     # Handwriting
     xournalpp
     rnote
+
+    # Dev
     vscode
+    nodejs_22
   ];
 }
