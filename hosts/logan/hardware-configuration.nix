@@ -23,6 +23,8 @@
     extraPackages32 = [pkgs.driversi686Linux.amdvlk];
   };
 
+  hardware.logitech.wireless.enable = true;
+
   services.xserver.videoDrivers = ["amdgpu"];
 
   fileSystems."/" =
