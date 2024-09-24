@@ -11,5 +11,18 @@
     # Dev
     vscode
     nodejs_22
+    clang_14
+    clang-tools_14
+    cmake
+    ninja
+    gnumake
+    zlib
+    catch2
+    boost
+    libelf
+    libdwarf
+    elfutils
+    libbfd
+    gopls
   ];
 }
