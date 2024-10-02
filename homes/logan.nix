@@ -24,5 +24,9 @@
     elfutils
     libbfd
     gopls
+
+    # misc
+    ryzenadj
+    ryzen-monitor-ng
   ];
 }
