@@ -41,14 +41,15 @@
         statusbar-bg = "#504945"; # bg2
         statusbar-fg = "#ebdbb2"; # fg
 
-        highlight-color = "#fabd2f"; # bright:yellow
-        highlight-active-color = "#fe8019"; # bright:orange
-
         default-bg = "#282828"; # bg
         default-fg = "#ebdbb2"; # fg
         render-loading = true;
         render-loading-bg = "#282828"; # bg
         render-loading-fg = "#ebdbb2"; # fg
+
+        # Unset colors
+        # highlight-color = "#fabd2f"; # bright:yellow
+        # highlight-active-color = "#fe8019"; # bright:orange
 
         # Recolor book content's color
         recolor-lightcolor = "#282828"; # bg
