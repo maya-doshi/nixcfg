@@ -85,7 +85,6 @@
   ];
 
   haze.apps = {
-    batsignal.enable = true;
     sioyek.enable = true;
     zathura.enable = true;
     foot.enable = true;
