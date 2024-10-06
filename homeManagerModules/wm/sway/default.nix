@@ -16,6 +16,7 @@
       clipboard = "wl-copy";
       emoji = "rofimoji --selector '${menu}' --clipboarder '${clipboard}'";
       bar = "waybar";
+      todo = "io.github.alainm23.planify.quick-add";
 
       up = "k";
       down = "j";
@@ -153,6 +154,7 @@
           # App Shortcuts
           "${mod}+Return" = "exec ${term}";
           "${mod}+bracketright" = "exec ${web}";
+          "${mod}+apostrophe" = "exec ${todo}";
 
           # Menu Commands
           "${mod}+d" = "exec ${menu}";
