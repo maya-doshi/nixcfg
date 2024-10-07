@@ -78,6 +78,8 @@
       planify
       man-pages
       man-pages-posix
+      liberation_ttf
+      times-newer-roman
   ];
 
   imports = [
