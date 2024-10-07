@@ -59,37 +59,37 @@
 
         colors = {
           focused = {
-           border = "#8EC07C";
-           background = "#1D2021";
-           text = "#8EC07C";
-           indicator = "#8EC07C";
-           childBorder = "#8EC07C";
+            border = "#8EC07C";
+            background = "#282828";
+            text = "#ebdbb2";
+            indicator = "#8EC07C";
+            childBorder = "#8EC07C";
           };
           focusedInactive = {
-            border = "#333333";
-            background = "#1D2021";
-            text = "#8EC07C";
+            border = "#282828";
+            background = "#282828";
+            text = "#ebdbb2";
             indicator = "#404040";
-            childBorder = "#000000";
+            childBorder = "#282828";
           };
           unfocused = {
-            border = "#333333";
-            background = "#1D2021";
-            text = "#888888";
+            border = "#282828";
+            background = "#282828";
+            text = "#ebdbb2";
             indicator = "#404040";
-            childBorder = "#000000";
+            childBorder = "#282828";
           };
           urgent = {
             border = "#2f343a";
-            background = "#900000";
-            text = "#ffffff";
+            background = "#fb4934";
+            text = "#ebdbb2";
             indicator = "#404040";
             childBorder = "#8EC07C";
           };
           placeholder = {
-            border = "#1D2021";
-            background = "#000000";
-            text = "#ffffff";
+            border = "#282828";
+            background = "#282828";
+            text = "#ebdbb2";
             indicator = "#404040";
             childBorder = "#8EC07C";
           };
@@ -115,6 +115,7 @@
                 border = "#282828";
                 text = "#ebdbb2";
               };
+              statusline = "#ebdbb2";
             };
             extraConfig =
               "workspace_min_width 25\n" +
