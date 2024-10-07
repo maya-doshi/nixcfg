@@ -15,7 +15,6 @@
       menu = "fuzzel";
       clipboard = "wl-copy";
       emoji = "rofimoji --selector '${menu}' --clipboarder '${clipboard}'";
-      bar = "waybar";
       todo = "io.github.alainm23.planify.quick-add";
 
       up = "k";
@@ -96,7 +95,32 @@
           };
         };
 
-        bars = [{command = "${bar}";}];
+        bars = [
+          {
+            fonts =  {
+              names = [ "JetBrains Mono Nerd Font" ];
+              style = "Regular";
+              size = 9.0;
+            };
+            position = "top";
+            colors = {
+              background = "#282828";
+              focusedWorkspace = {
+                background = "#8EC07C";
+                border = "#8EC07C";
+                text = "#282828";
+              };
+              inactiveWorkspace = {
+                background = "#282828";
+                border = "#282828";
+                text = "#ebdbb2";
+              };
+            };
+            extraConfig =
+              "workspace_min_width 25\n" +
+              "status_command while echo \"VOL: $(if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then echo 0%; else pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'; fi) BAT: $(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}') $(date +'%Y-%m-%d %l:%M %p')\"; do sleep 1; done";
+          }
+        ];
 
         seat."*".xcursor_theme = "Adwaita 24";
 

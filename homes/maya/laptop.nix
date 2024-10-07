@@ -91,7 +91,6 @@
     zathura.enable = true;
     foot.enable = true;
     fuzzel.enable = true;
-    waybar.enable = true;
   };
 
   haze.windowManager.sway.enable = true;
