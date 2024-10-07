@@ -55,6 +55,7 @@
         focus = {
           followMouse = "always";
           newWindow = "focus";
+          mouseWarping = "container";
         };
 
         colors = {
