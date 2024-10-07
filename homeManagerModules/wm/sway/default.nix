@@ -119,7 +119,7 @@
             };
             extraConfig =
               "workspace_min_width 25\n" +
-              "status_command while echo \"BCK: $(brightnessctl | awk 'FNR == 2 {gsub(/[()]/, \\\"\\\", $4); print $4}') VOL: $(if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then echo 0%; else pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'; fi) BAT: $(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}') $(date +'%Y-%m-%d %l:%M %p')\"; do sleep 1; done";
+              "status_command while echo \"BCK: $(brightnessctl i -m | cut -d ',' -f4) VOL: $(if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then echo 0%; else pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'; fi) BAT: $(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}') $(date +'%Y-%m-%d %l:%M %p')\"; do sleep 1; done";
           }
         ];
 
