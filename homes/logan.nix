@@ -28,5 +28,6 @@
     # misc
     ryzenadj
     ryzen-monitor-ng
+    vial
   ];
 }
