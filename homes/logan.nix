@@ -29,5 +29,7 @@
     ryzenadj
     ryzen-monitor-ng
     vial
+    mixxx
+    hexchat
   ];
 }

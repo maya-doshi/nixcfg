@@ -80,6 +80,7 @@
       man-pages-posix
       liberation_ttf
       times-newer-roman
+      tuba
   ];
 
   imports = [
