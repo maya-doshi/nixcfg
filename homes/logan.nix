@@ -31,5 +31,6 @@
     vial
     mixxx
     hexchat
+    prismlauncher
   ];
 }
