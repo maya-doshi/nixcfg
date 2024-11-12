@@ -32,5 +32,6 @@
     mixxx
     hexchat
     prismlauncher
+    obs-studio
   ];
 }
