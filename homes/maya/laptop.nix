@@ -81,6 +81,7 @@
       liberation_ttf
       times-newer-roman
       tuba
+      foliate
   ];
 
   imports = [
