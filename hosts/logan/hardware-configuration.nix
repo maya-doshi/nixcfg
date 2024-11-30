@@ -13,10 +13,9 @@
   boot.kernelModules = [ "kvm-amd" "amd-gpu" "zenpower" "i2c-dev" ];
   boot.extraModulePackages = [ ];
 
-  hardware.opengl = {
+  hardware.graphics = {
     ## radv: an open-source Vulkan driver from freedesktop
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
 
     ## amdvlk: an open-source Vulkan driver from AMD
     extraPackages = [pkgs.amdvlk];

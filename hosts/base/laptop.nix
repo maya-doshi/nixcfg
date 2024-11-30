@@ -60,14 +60,14 @@
     gnome-text-editor
     gnome-console
     epiphany
-    gnome.yelp
-    gnome.gnome-contacts
-    gnome.simple-scan
-    gnome.geary
-    gnome.gnome-music
-    gnome.gnome-characters
-    gnome.gnome-maps
-    gnome.totem
+    yelp
+    gnome-contacts
+    simple-scan
+    geary
+    gnome-music
+    gnome-characters
+    gnome-maps
+    totem
   ]);
 
   environment.sessionVariables.NIXOS_OZONE_WL="1";
@@ -83,7 +83,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -189,7 +188,6 @@
     jellyfin-media-player
     plex-media-player
     easyeffects
-    gnome.gnome-sound-recorder
     komikku
 
     # misc
@@ -243,6 +241,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
 }
