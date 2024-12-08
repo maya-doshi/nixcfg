@@ -56,7 +56,7 @@
       telegram-desktop
       fractal
       signal-desktop
-      webcord
+      vesktop
 
       # sway stuff
       sway-contrib.grimshot
