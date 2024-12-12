@@ -82,6 +82,7 @@
       times-newer-roman
       tuba
       foliate
+      calibre
   ];
 
   imports = [
