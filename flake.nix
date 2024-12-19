@@ -61,6 +61,14 @@
             agenix.nixosModules.default
           ];
         };
+
+        john = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/john/configuration.nix
+            agenix.nixosModules.default
+          ];
+        };
       };
     };
 }
