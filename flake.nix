@@ -69,6 +69,14 @@
             agenix.nixosModules.default
           ];
         };
+
+        logan-baby = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/logan-baby/configuration.nix
+            agenix.nixosModules.default
+          ];
+        };
       };
     };
 }
