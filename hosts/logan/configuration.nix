@@ -7,6 +7,9 @@
     ./hardware-configuration.nix
   ];
 
+  # Set your time zone.
+  time.timeZone = "Asia/Calcutta";
+
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
