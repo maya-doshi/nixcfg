@@ -6,6 +6,13 @@
       ../../nixosModules
     ];
 
+  environment.systemPackages = with pkgs; [
+    wget
+    curl
+    git
+    tmux
+  ];
+
   nixpkgs.config.allowUnfree = true;
 
   # Bootloader.
