@@ -25,7 +25,10 @@
     };
   };
 
-  services.flatpak.enable = true;
+  services = {
+    flatpak.enable = true;
+    openssh.enable = true;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.maya = {
