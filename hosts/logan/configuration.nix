@@ -34,7 +34,7 @@
   users.users.maya = {
     isNormalUser = true;
     description = "maya";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker" ];
   };
 
 }
