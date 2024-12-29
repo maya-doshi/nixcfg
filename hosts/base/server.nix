@@ -8,6 +8,10 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    wget
+    tmux
+    curl
+    git
   ];
 
   virtualisation.docker = {
