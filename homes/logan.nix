@@ -25,6 +25,11 @@
     libbfd
     gopls
 
+    # music
+    plexamp
+    spotify
+    spotify-player
+
     # misc
     ryzenadj
     ryzen-monitor-ng
