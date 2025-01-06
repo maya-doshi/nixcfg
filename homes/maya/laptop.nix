@@ -83,6 +83,7 @@
       tuba
       foliate
       calibre
+      plex-mpv-shim
   ];
 
   imports = [
