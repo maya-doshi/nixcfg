@@ -10,6 +10,7 @@
 
     # Dev
     vscode
+    zed-editor
     nodejs_22
     clang_14
     clang-tools_14
