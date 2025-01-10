@@ -19,7 +19,7 @@
   networking.hostName = "logan-baby"; # Define your hostname.
 
   # Set your time zone.
-  time.timeZone = "Asia/Kolkata";
+  time.timeZone = "America/New_York";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.maya = {

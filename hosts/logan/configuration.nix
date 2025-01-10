@@ -8,7 +8,7 @@
   ];
 
   # Set your time zone.
-  time.timeZone = "Asia/Calcutta";
+  time.timeZone = "America/New_York";
 
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
