@@ -85,6 +85,7 @@
       calibre
       plex-mpv-shim
       endeavour
+      geary
   ];
 
   imports = [
