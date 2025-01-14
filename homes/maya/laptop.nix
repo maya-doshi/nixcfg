@@ -84,6 +84,7 @@
       foliate
       calibre
       plex-mpv-shim
+      endeavour
   ];
 
   imports = [
