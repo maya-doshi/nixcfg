@@ -169,6 +169,7 @@
     dive # look into docker image layers
     icecast
     distrobox
+    sshfs
   ];
 
   programs.java.enable = true;
