@@ -15,7 +15,10 @@
 
   networking.hostName = "logan";
 
-  zramSwap.enable = true;
+  zramSwap = {
+    enable = true;
+    memoryPercent = 100;
+  };
 
   haze.gaming = {
     steam.enable = true;
