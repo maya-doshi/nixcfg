@@ -56,6 +56,7 @@
       telegram-desktop
       fractal
       signal-desktop
+      flare-signal
       vesktop
 
       # sway stuff
