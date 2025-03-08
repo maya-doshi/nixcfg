@@ -63,6 +63,7 @@
       sway-contrib.grimshot
       swaynotificationcenter
       brightnessctl
+      playerctl
       pavucontrol
       rofimoji
       swaylock

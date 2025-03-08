@@ -353,9 +353,17 @@
       in ''
         bindsym --locked XF86MonBrightnessUp exec ${brightness_up}
         bindsym --locked XF86MonBrightnessDown exec ${brightness_down}
+
+        ## Media
         bindsym --locked XF86AudioRaiseVolume exec ${vol_up}
         bindsym --locked XF86AudioLowerVolume exec ${vol_down}
         bindsym --locked XF86AudioMute exec ${vol_mute}
+
+        bindsym --locked XF86AudioPlay exec playerctl play-pause
+        bindsym --locked XF86AudioPause exec playerctl pause
+
+        bindsym --locked XF86AudioNext exec playerctl next
+        bindsym --locked XF86AudioPrev exec playerctl previous
 
         bindswitch --reload --locked lid:on exec ${lock}
       '';
