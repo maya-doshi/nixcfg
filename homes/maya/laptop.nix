@@ -22,7 +22,6 @@
       lazygit
       ghc
       gh
-      emacs29-pgtk
 
       # security
       bitwarden
@@ -31,7 +30,6 @@
       # TODO - add a 2fa app
 
       # docs
-      qownnotes
       libreoffice
       obsidian
 
@@ -72,18 +70,13 @@
       wdisplays
 
       # misc
-      ddcutil
       gnome-sound-recorder
-      sqlitebrowser
-      sqlite
       ungoogled-chromium
       planify
       man-pages
       man-pages-posix
       liberation_ttf
       times-newer-roman
-      tuba
-      foliate
       calibre
       plex-mpv-shim
       endeavour
