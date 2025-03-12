@@ -1,5 +1,6 @@
 { config, lib, pkgs, ... }: {
   options.haze = {
+    devices.qudelix5k.enable = lib.mkEnableOption "Qudelix 5K Bluetooth UDEV rules";
     services = {
       syncthing.enable = lib.mkEnableOption "Syncthing - File Sync";
       tailscale.enable = lib.mkEnableOption "Tailscale - Split VPN";

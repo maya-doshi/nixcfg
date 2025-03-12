@@ -174,6 +174,8 @@
 
   programs.java.enable = true;
 
+  haze.devices.qudelix5k.enable = true;
+
   haze.services = {
     syncthing.enable = true;
     tailscale.enable = true;
