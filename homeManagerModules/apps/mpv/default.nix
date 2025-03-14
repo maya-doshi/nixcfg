@@ -14,7 +14,6 @@
             uosc
             sponsorblock
             quality-menu
-            visualizer
             videoclip
           ];
 
