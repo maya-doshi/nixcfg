@@ -8,8 +8,14 @@
       package = (
         pkgs.mpv-unwrapped.wrapper {
           scripts = with pkgs.mpvScripts; [
+            dynamic-crop
+            thumbfast
+            mpv-cheatsheet
             uosc
             sponsorblock
+            quality-menu
+            visualizer
+            videoclip
           ];
 
           mpv = pkgs.mpv-unwrapped.override {
@@ -23,7 +29,6 @@
       config = {
         profile = "high-quality";
         ytdl-format = "bestvideo+bestaudio";
-        cache-default = 4000000;
       };
     };
   };
