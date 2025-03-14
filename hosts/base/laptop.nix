@@ -146,7 +146,6 @@
     tmux
 
     # media
-    mpv
     pulseaudio
     yt-dlp
     mediainfo

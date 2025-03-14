@@ -90,6 +90,7 @@
     sioyek.enable = true;
     zathura.enable = true;
     foot.enable = true;
+    mpv.enable = true;
     fuzzel.enable = true;
   };
 

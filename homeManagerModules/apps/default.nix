@@ -5,10 +5,11 @@
   ...
 }: {
   imports = [
-    ./sioyek
-    ./zathura
-    ./waybar
     ./foot
     ./fuzzel
+    ./mpv
+    ./sioyek
+    ./waybar
+    ./zathura
   ];
 }
