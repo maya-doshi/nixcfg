@@ -11,9 +11,11 @@
   time.timeZone = "America/New_York";
 
   # Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages;
+  boot.supportedFilesystems = [ "zfs" ];
 
   networking.hostName = "logan";
+  networking.hostId = "3cebc3c4";
 
   zramSwap = {
     enable = true;
