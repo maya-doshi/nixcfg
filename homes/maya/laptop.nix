@@ -80,6 +80,7 @@
       calibre
       plex-mpv-shim
       endeavour
+      helix
   ];
 
   imports = [
