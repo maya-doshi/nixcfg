@@ -121,17 +121,10 @@
     adw-gtk3
 
     # code
-    go
     cargo
-    rustc
-    gcc
     python3
     git
-    upx
     onefetch
-    pkg-config
-    lua
-    openjdk
 
     # cli
     fish
@@ -149,10 +142,7 @@
     pulseaudio
     yt-dlp
     mediainfo
-    jellyfin-media-player
-    plex-media-player
     easyeffects
-    komikku
 
     # misc
     networkmanagerapplet
@@ -164,14 +154,9 @@
     openssl
     direnv
     virt-manager
-    bat
     dive # look into docker image layers
-    icecast
-    distrobox
     sshfs
   ];
-
-  programs.java.enable = true;
 
   haze.devices.qudelix5k.enable = true;
 
