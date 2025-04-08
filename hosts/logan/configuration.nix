@@ -19,7 +19,7 @@
 
   zramSwap = {
     enable = true;
-    memoryPercent = 100;
+    memoryPercent = 50;
   };
 
   haze.gaming = {
