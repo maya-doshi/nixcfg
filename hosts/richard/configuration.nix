@@ -12,7 +12,14 @@
 
   networking.hostName = "richard";
 
-  services.flatpak.enable = true;
+  zramSwap = {
+    enable = true;
+    memoryPercent = 50;
+  };
+
+  services = {
+    openssh.enable = true;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.maya = {
