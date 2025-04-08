@@ -20,7 +20,6 @@
   home.packages = with pkgs; [
       # code
       lazygit
-      ghc
       gh
 
       # security
@@ -39,6 +38,7 @@
       spotify
       spotifyd
       spotify-player
+      plexamp
       shortwave
       picard
 
@@ -52,9 +52,7 @@
       thunderbird
       protonmail-bridge
       telegram-desktop
-      fractal
       signal-desktop
-      flare-signal
       vesktop
 
       # sway stuff
@@ -70,9 +68,7 @@
       wdisplays
 
       # misc
-      gnome-sound-recorder
       ungoogled-chromium
-      planify
       man-pages
       man-pages-posix
       liberation_ttf

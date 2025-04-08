@@ -11,8 +11,7 @@
   time.timeZone = "America/New_York";
 
   # Kernel
-  boot.kernelPackages = pkgs.linuxPackages;
-  boot.supportedFilesystems = [ "zfs" ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "logan";
   networking.hostId = "3cebc3c4";
@@ -31,7 +30,6 @@
   };
 
   services = {
-    flatpak.enable = true;
     openssh.enable = true;
   };
 
