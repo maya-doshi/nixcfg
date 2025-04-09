@@ -62,6 +62,7 @@
       brightnessctl
       acpi
       i3blocks
+      wirelesstools
       playerctl
       pavucontrol
       rofimoji
