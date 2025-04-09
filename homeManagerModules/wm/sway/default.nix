@@ -343,12 +343,15 @@
       };
 
       extraConfig = let
-        brightness_up = "brightnessctl set 5%+";
-        brightness_down = "brightnessctl set 5%-";
+        brightness_signal = "pkill -SIGRTMIN+11 i3blocks";
+        brightness_up   = "brightnessctl set 5%+ && ${brightness_signal}";
+        brightness_down = "brightnessctl set 5%- && ${brightness_signal}";
 
-        vol_mute = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
-        vol_up = "pactl set-sink-volume @DEFAULT_SINK@ +5%";
-        vol_down = "pactl set-sink-volume @DEFAULT_SINK@ -5%";
+        vol_signal = "pkill -SIGRTMIN+10 i3blocks";
+        vol_mute = "pactl set-sink-mute @DEFAULT_SINK@ toggle && ${vol_signal}";
+        vol_up   = "pactl set-sink-volume @DEFAULT_SINK@ +5%  && ${vol_signal}";
+        vol_down = "pactl set-sink-volume @DEFAULT_SINK@ -5%  && ${vol_signal}";
+
         lock = "swaylock -c \"#1e1e2e\" --ring-color \"#D2ABDB\" | systemctl suspend";
       in ''
         bindsym --locked XF86MonBrightnessUp exec ${brightness_up}
