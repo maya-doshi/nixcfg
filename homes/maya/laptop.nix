@@ -21,6 +21,7 @@
       # code
       lazygit
       gh
+      gnupg1
 
       # security
       bitwarden
