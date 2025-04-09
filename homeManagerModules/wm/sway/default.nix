@@ -119,7 +119,7 @@
             };
             extraConfig =
               "workspace_min_width 25\n" +
-              "status_command while echo \"BCK: $(brightnessctl i -m | cut -d ',' -f4) VOL: $(if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then echo 0%; else pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'; fi) BAT: $(if cat /sys/class/power_supply/BAT0/status | grep -q 'Discharging'; then echo '-'; else if cat /sys/class/power_supply/BAT0/status | grep -q 'Not charging'; then echo '~'; else echo '+'; fi fi)$(cat /sys/class/power_supply/BAT0/capacity)% $(date +'%Y-%m-%d %l:%M %p')\"; do sleep 1; done;";
+              "status_command i3blocks";
           }
         ];
 

@@ -60,6 +60,8 @@
       sway-contrib.grimshot
       swaynotificationcenter
       brightnessctl
+      acpi
+      i3blocks
       playerctl
       pavucontrol
       rofimoji
