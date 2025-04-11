@@ -9,7 +9,7 @@
   config = lib.mkIf config.haze.windowManager.sway.enable {
     wayland.windowManager.sway = let
       mod = "Mod4";
-      term = "foot";
+      term = "footclient";
       termServer = "foot --server";
       web = "firefox";
       menu = "fuzzel";
@@ -39,7 +39,7 @@
         menu = "${menu}";
 
         startup = [
-          # {command = "${termServer}";}
+          {command = "${termServer}";}
           {command = "${notify}";}
         ];
 
