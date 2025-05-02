@@ -20,7 +20,6 @@
         "next_page;goto_top_of_page" = "J";
         "previous_page;goto_top_of_page" = "K";
         "toggle_custom_color" = "<C-r>";
-        "toggle_two_page_mode" = "d";
       };
     };
   };
