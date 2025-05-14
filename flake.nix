@@ -1,5 +1,5 @@
 {
-  description = "maya-nixcfg";
+  description = "haze";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.11";
