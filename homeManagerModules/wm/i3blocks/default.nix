@@ -54,7 +54,7 @@
 
           battery = lib.hm.dag.entryAfter [ "volume" ] {
             command = "~/.config/i3blocks/scripts/battery.sh";
-            interval = "once";
+            interval = 60;
             signal = 12;
           };
 
