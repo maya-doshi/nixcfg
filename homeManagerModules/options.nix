@@ -17,6 +17,7 @@
     };
     windowManager = {
       sway.enable = lib.mkEnableOption "Enable SwayWM";
+      i3blocks.enable = lib.mkEnableOption "Enable i3blocks";
     };
   };
 }
