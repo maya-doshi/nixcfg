@@ -67,6 +67,7 @@
         };
       };
 
+    # TODO: figure out how to get this working from in here or somewhere else
     #   systemd.user = {
     #     timers."i3blocks-time-signal" = {
     #       description = "i3blocks time signal";
@@ -75,7 +76,6 @@
     #         Persistent = true;
     #       };
     #     };
-    #
     #     services."i3blocks-time-signal" = {
     #       Unit = {
     #         Description = "i3blocks time signal service";
