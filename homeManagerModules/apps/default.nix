@@ -9,7 +9,6 @@
     ./fuzzel
     ./mpv
     ./sioyek
-    ./waybar
     ./zathura
   ];
 }

@@ -11,7 +11,6 @@
       };
       fuzzel.enable = lib.mkEnableOption "Fuzzel - Launcher";
       mpv.enable = lib.mkEnableOption "MPV - Media Player with scripts, cdda and sixel";
-      waybar.enable = lib.mkEnableOption "Waybar - Wayland Bar";
       sioyek.enable = lib.mkEnableOption "Sioyek - PDF Reader";
       zathura.enable = lib.mkEnableOption "Zathura - Document Reader";
     };
