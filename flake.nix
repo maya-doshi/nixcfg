@@ -17,7 +17,14 @@
   outputs = { self, nixpkgs, home-manager, nixos-hardware, agenix, ... }:
     let
       lib = nixpkgs.lib;
+
+      overlays = [
+        (import ./overlays/mpv.nix)
+      ];
+
     in {
+      overlays.default = lib.composeManyExtensions overlays;
+
       nixosConfigurations = {
         logan = lib.nixosSystem {
           system = "x86_64-linux";
@@ -29,6 +36,7 @@
               home-manager.users.maya = import ./homes/logan.nix;
             }
             agenix.nixosModules.default
+            { nixpkgs.overlays = overlays; }
           ];
         };
 
@@ -46,24 +54,11 @@
             {
               environment.systemPackages = [ agenix.packages.x86_64-linux.default ];
             }
+            { nixpkgs.overlays = overlays; }
           ];
         };
 
-        john = lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/john/configuration.nix
-            agenix.nixosModules.default
-          ];
-        };
-
-        logan-baby = lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            ./hosts/logan-baby/configuration.nix
-            agenix.nixosModules.default
-          ];
-        };
+        # stefan coming soon
       };
     };
 }

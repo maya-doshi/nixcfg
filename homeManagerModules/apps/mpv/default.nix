@@ -7,6 +7,8 @@
 
       package = (
         pkgs.mpv-unwrapped.wrapper {
+          mpv = pkgs.mpv-unwrapped;
+
           scripts = with pkgs.mpvScripts; [
             dynamic-crop
             thumbfast
@@ -16,12 +18,6 @@
             quality-menu
             videoclip
           ];
-
-          mpv = pkgs.mpv-unwrapped.override {
-            waylandSupport = true;
-            cddaSupport = true;
-            sixelSupport = true;
-          };
         }
       );
 
