@@ -8,13 +8,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/home-manager/release-24.11";
     };
-    agenix = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:ryantm/agenix";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, agenix, ... }:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }:
     let
       lib = nixpkgs.lib;
 
@@ -35,7 +31,6 @@
               home-manager.useUserPackages = true;
               home-manager.users.maya = import ./homes/logan.nix;
             }
-            agenix.nixosModules.default
             { nixpkgs.overlays = overlays; }
           ];
         };
@@ -50,10 +45,6 @@
               home-manager.users.maya = import ./homes/maya/richard.nix;
             }
             nixos-hardware.nixosModules.lenovo-thinkpad-x220
-            agenix.nixosModules.default
-            {
-              environment.systemPackages = [ agenix.packages.x86_64-linux.default ];
-            }
             { nixpkgs.overlays = overlays; }
           ];
         };
