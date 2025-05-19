@@ -41,12 +41,6 @@
   environment.sessionVariables.NIXOS_OZONE_WL="1";
   environment.sessionVariables.GOPATH="$HOME/.local/share/go";
 
-  # Configure keymap in X11
-  services.xserver = {
-    xkb.layout = "us";
-    xkb.variant = "";
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

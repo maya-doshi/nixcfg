@@ -8,10 +8,6 @@
 
   environment.systemPackages = with pkgs; [
     vim
-    wget
-    tmux
-    curl
-    git
   ];
 
   virtualisation.docker = {
@@ -19,7 +15,6 @@
       enable = true;
       setSocketVariable = true;
     };
-    storageDriver = "btrfs";
   };
 
   # Some programs need SUID wrappers, can be configured further or are

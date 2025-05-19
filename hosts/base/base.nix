@@ -36,6 +36,13 @@
     };
   };
 
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
+
+
   programs.nix-ld.enable = true;
 
   # Open ports in the firewall.
