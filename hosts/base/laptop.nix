@@ -98,7 +98,12 @@
     spleen
     fira-code-symbols
     powerline-fonts
-    nerdfonts
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.iosevka
+    nerd-fonts.iosevka-term
+    nerd-fonts.open-dyslexic
+    nerd-fonts.atkynson-mono
+    nerd-fonts.bigblue-terminal
     noto-fonts-color-emoji
   ];
 
