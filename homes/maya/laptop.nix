@@ -89,10 +89,7 @@
   haze.apps = {
     sioyek.enable = true;
     zathura.enable = true;
-    foot = {
-      enable = true;
-      font = "Iosevka Term NF:size=12";
-    };
+    foot.enable = true;
     mpv.enable = true;
     fuzzel.enable = true;
   };

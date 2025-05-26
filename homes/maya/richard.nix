@@ -5,5 +5,5 @@
     ./laptop.nix
   ];
 
-  haze.apps.foot.font = "JetBrainsMono Nerd Font:size=10";
+  haze.apps.foot.font = "IosevkaTerm NF:size=10";
 }
