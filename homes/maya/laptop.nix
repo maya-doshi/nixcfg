@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, self, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -84,6 +84,7 @@
 
   imports = [
     ../../homeManagerModules
+    self.inputs.zen-browser.homeModules.default
   ];
 
   haze.apps = {
@@ -131,8 +132,10 @@
     # EDITOR = "emacs";
   };
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager.enable = true; # Let Home Manager install and manage itself.
+    zen-browser.enable = true;
+  };
 
   # services.emacs = {
   #   enable = true;
