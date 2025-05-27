@@ -33,6 +33,7 @@
           modules = [
             ./hosts/logan/configuration.nix
             home-manager.nixosModules.home-manager {
+              home-manager.extraSpecialArgs = {inherit self;};
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.maya = import ./homes/logan.nix;
@@ -46,6 +47,7 @@
           modules = [
             ./hosts/richard/configuration.nix
             home-manager.nixosModules.home-manager {
+              home-manager.extraSpecialArgs = {inherit self;};
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.maya = import ./homes/maya/richard.nix;
