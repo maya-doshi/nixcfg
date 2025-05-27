@@ -57,6 +57,20 @@
           ];
         };
 
+        oliver = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/oliver/configuration.nix
+            home-manager.nixosModules.home-manager {
+              home-manager.extraSpecialArgs = {inherit self;};
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.haze = import ./homes/maya/desktop.nix;
+            }
+            { nixpkgs.overlays = overlays; }
+          ];
+        };
+
         # stefan coming soon
         # but first his mutant child
         stefyle = lib.nixosSystem {
