@@ -12,7 +12,7 @@
       mod = "Mod4";
       term = "footclient";
       termServer = "foot --server";
-      web = "firefox";
+      web = "zen";
       menu = "fuzzel";
       clipboard = "wl-copy";
       emoji = "rofimoji --selector '${menu}' --clipboarder '${clipboard}'";
