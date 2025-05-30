@@ -68,7 +68,7 @@
   ];
 
   imports = [
-    ../../homeManagerModules
+    ../homeManagerModules
     self.inputs.zen-browser.homeModules.default
   ];
 
