@@ -50,7 +50,7 @@
               home-manager.extraSpecialArgs = {inherit self;};
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.maya = import ./homes/maya/richard.nix;
+              home-manager.users.maya = import ./homes/richard.nix;
             }
             nixos-hardware.nixosModules.lenovo-thinkpad-x220
             { nixpkgs.overlays = overlays; }
@@ -65,7 +65,7 @@
               home-manager.extraSpecialArgs = {inherit self;};
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.haze = import ./homes/maya/desktop.nix;
+              home-manager.users.haze = import ./homes/desktop.nix;
             }
             { nixpkgs.overlays = overlays; }
           ];

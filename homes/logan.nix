@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./maya/laptop.nix ];
+  imports = [ ./laptop.nix ];
 
   home.packages = with pkgs; [
     # CAD
