@@ -160,6 +160,7 @@
   haze.devices.qudelix5k.enable = true;
 
   haze.services = {
+    emacs.enable = true;
     syncthing.enable = true;
     tailscale.enable = true;
   };
