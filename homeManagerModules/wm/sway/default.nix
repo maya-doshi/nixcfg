@@ -176,7 +176,7 @@
           };
 
           "*" = {
-            bg = "~/Pictures/Wallpapers/zoro_luffy2.jpg fill";
+            bg = "~/Pictures/Wallpapers/new-wallpaper.png fill";
           };
         };
 
