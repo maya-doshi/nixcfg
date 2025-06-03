@@ -1,6 +1,14 @@
 # Maya's NixOS Flake
 :D
 
+sway config is very minimal visually, dont care to "rice" too much
+
+---
+
+![](./_img/logan_screenshot_2025-06-03.png)
+
+---
+
 ## Hosts
 | Name     | Role                                         | Model                                                       |
 | -------- | -------------------------------------------- | ----------------------------------------------------------- |
