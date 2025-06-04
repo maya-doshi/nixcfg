@@ -50,6 +50,7 @@
               home-manager.extraSpecialArgs = {inherit self;};
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+              home-manager.backupFileExtension="bak";
               home-manager.users.maya = import ./homes/richard.nix;
             }
             nixos-hardware.nixosModules.lenovo-thinkpad-x220
