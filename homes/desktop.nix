@@ -63,7 +63,7 @@
       acpi
       wirelesstools
       playerctl
-      pavucontrol
+      pwvucontrol
       rofimoji
       swaylock
       wl-clipboard

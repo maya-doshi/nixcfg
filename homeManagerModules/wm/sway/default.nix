@@ -321,7 +321,7 @@
             { class = "dialog"; }
             { class = "Dialog"; }
 
-            { app_id = "pavucontrol"; }
+            { app_id = "com.saivert.pwvucontrol"; }
             { app_id = "xdg-desktop-portal-*"; }
             { app_id = "org.telegram.desktop"; }
             { app_id = "org.gnome.clocks"; }

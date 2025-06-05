@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 case "$BLOCK_BUTTON" in
-    1) pavucontrol > /dev/null 2>&1 & disown ;;     # left click
+    1) pwvucontrol > /dev/null 2>&1 & disown ;;     # left click
     3) blueman-manager > /dev/null 2>&1 & disown ;; # right click
 esac
 
