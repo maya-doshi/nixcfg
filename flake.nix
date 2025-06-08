@@ -72,12 +72,10 @@
           ];
         };
 
-        # stefan coming soon
-        # but first his mutant child
-        stefyle = lib.nixosSystem {
+        stefan = lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/stefyle/configuration.nix
+            ./hosts/stefan/configuration.nix
             { nixpkgs.overlays = overlays; }
           ];
         };
