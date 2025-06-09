@@ -7,6 +7,8 @@
     ];
 
   environment.systemPackages = with pkgs; [
+    btop
+    fish
     wget
     curl
     git

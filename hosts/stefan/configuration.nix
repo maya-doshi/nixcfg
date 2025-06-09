@@ -5,6 +5,8 @@
     [
       ./hardware-configuration.nix
       ./drives.nix
+      ./services.nix
+      ./plex.nix
       ../base/server.nix
     ];
 
