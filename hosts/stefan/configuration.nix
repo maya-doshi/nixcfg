@@ -5,8 +5,6 @@
     [
       ./hardware-configuration.nix
       ./drives.nix
-      ./services.nix
-      ./plex.nix
       ../base/server.nix
     ];
 
@@ -30,10 +28,27 @@
   environment.systemPackages = with pkgs; [
   ];
 
-  services.plex = {
-    enable = true;
-    dataDir = "/mnt/old/250GB/bonus/appdata/plex/";
-    openFirewall = true;
+  services = {
+    plex = {
+      enable = true;
+      dataDir = "/mnt/old/250GB/bonus/appdata/plex/";
+      openFirewall = true;
+    };
+
+    tautulli = {
+      enable = true;
+      dataDir = "/mnt/old/250GB/bonus/appdata/tautulli/";
+      configFile = "/mnt/old/250GB/bonus/appdata/tautulli/config.ini";
+      openFirewall = true;
+      port = 8181;
+    };
+
+    kavita = {
+      enable = true;
+      dataDir = "/mnt/old/250GB/bonus/appdata/kavita/";
+      tokenKeyFile = "/mnt/old/250GB/bonus/appdata/kavita/tokenKey";
+      settings.Port = 5000;
+    };
   };
 
   haze.services.memos = {
