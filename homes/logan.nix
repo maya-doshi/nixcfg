@@ -17,7 +17,6 @@
     # misc
     ryzenadj
     ryzen-monitor-ng
-    hexchat
     obs-studio
   ];
 }

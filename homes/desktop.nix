@@ -1,90 +1,11 @@
 { config, pkgs, self, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "haze";
   home.homeDirectory = "/home/haze";
 
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "25.05"; # Please read the comment before changing.
-
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
-  home.packages = with pkgs; [
-      # code
-      lazygit
-      gh
-      gnupg1
-
-      # security
-      bitwarden
-      bitwarden-cli
-      ## add a 2fa app
-      # TODO - add a 2fa app
-
-      # docs
-      libreoffice
-      obsidian
-
-      # music
-      nicotine-plus
-      strawberry
-      spotify
-      spotifyd
-      spotify-player
-      plexamp
-      shortwave
-      picard
-
-      # image
-      gimp
-
-      # latex
-      tectonic
-
-      # communication
-      thunderbird
-      protonmail-bridge
-      telegram-desktop
-      signal-desktop
-      vesktop
-
-      # sway stuff
-      sway-contrib.grimshot
-      swaynotificationcenter
-      brightnessctl
-      acpi
-      wirelesstools
-      playerctl
-      pwvucontrol
-      rofimoji
-      swaylock
-      wl-clipboard
-      nwg-displays
-      wdisplays
-
-      # misc
-      ungoogled-chromium
-      man-pages
-      man-pages-posix
-      liberation_ttf
-      times-newer-roman
-      calibre
-      plex-mpv-shim
-      endeavour
-      helix
-  ];
-
   imports = [
-    ../homeManagerModules
-    self.inputs.zen-browser.homeModules.default
+    ./base.nix
   ];
 
   haze.apps = {
