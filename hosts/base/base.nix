@@ -16,6 +16,11 @@
     tmux
   ];
 
+  sops = {
+    defaultSopsFile = "./secrets/keys.yaml";
+    age.keyFile = "~/.config/sops/secrets/age-key.txt";
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   # Enable networking
