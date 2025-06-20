@@ -56,4 +56,15 @@
     dataDir = "/mnt/old/250GB/bonus/appdata/memos/";
     openFirewall = true;
   };
+
+  haze.services = {
+    memos = {
+      enable = true;
+      dataDir = "/mnt/old/250GB/bonus/appdata/memos/";
+      openFirewall = true;
+    };
+
+    docker.enable = true;
+    nextcloud.enable = true;
+  };
 }
