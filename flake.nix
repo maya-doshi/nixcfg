@@ -10,13 +10,18 @@
       url = "github:nix-community/home-manager/release-25.05";
     };
 
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }:
+  outputs = { self, nixpkgs, home-manager, sops-nix, nixos-hardware, ... }:
     let
       lib = nixpkgs.lib;
 
@@ -38,6 +43,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.maya = import ./homes/logan.nix;
             }
+            sops-nix.nixosModules.sops
             { nixpkgs.overlays = overlays; }
           ];
         };
@@ -53,6 +59,7 @@
               home-manager.backupFileExtension="bak";
               home-manager.users.maya = import ./homes/richard.nix;
             }
+            sops-nix.nixosModules.sops
             nixos-hardware.nixosModules.lenovo-thinkpad-x220
             { nixpkgs.overlays = overlays; }
           ];
@@ -68,6 +75,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.haze = import ./homes/desktop.nix;
             }
+            sops-nix.nixosModules.sops
             { nixpkgs.overlays = overlays; }
           ];
         };
@@ -76,6 +84,7 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/stefan/configuration.nix
+            sops-nix.nixosModules.sops
             { nixpkgs.overlays = overlays; }
           ];
         };
