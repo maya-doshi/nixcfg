@@ -42,6 +42,7 @@
 
       # music
       nicotine-plus
+      spotify
       strawberry
       plexamp
       shortwave
