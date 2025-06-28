@@ -56,6 +56,7 @@
 
       # communication
       thunderbird
+      errands
       protonmail-bridge
       telegram-desktop
       signal-desktop
