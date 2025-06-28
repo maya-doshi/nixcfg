@@ -93,6 +93,7 @@
       p7zip
       nfs-utils
       libnotify
+      file
   ];
 
   imports = [

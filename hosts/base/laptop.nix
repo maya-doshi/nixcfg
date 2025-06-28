@@ -76,7 +76,10 @@
   # services.xserver.libinput.enable = true;
 
   # So it shows up in the display manager?
-  programs.sway.enable = true;
+  programs = {
+    sway.enable = true;
+    niri.enable = true;
+  };
 
   # Install neovim
   programs.neovim = {
