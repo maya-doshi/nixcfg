@@ -43,6 +43,19 @@
 
   programs.sway.extraOptions = [ "--unsupported-gpu" ];
 
+  zramSwap = {
+    enable = true;
+    memoryPercent = 50;
+  };
+
+  haze.gaming = {
+    steam.enable = true;
+    emu.dolphin = {
+      enable = true;
+      gc-oc = true;
+    };
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

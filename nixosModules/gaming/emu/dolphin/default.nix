@@ -4,12 +4,8 @@
     users.users.${config.haze.user}.packages = [ pkgs.dolphin-emu ];
 
     boot = lib.mkIf config.haze.gaming.emu.dolphin.gc-oc {
-      extraModulePackages = [
-        config.boot.kernelPackages.gcadapter-oc-kmod
-      ];
-      kernelModules = [
-        "gcadapter_oc"
-      ];
+      extraModulePackages = [ config.boot.kernelPackages.gcadapter-oc-kmod ];
+      kernelModules = [ "gcadapter_oc" ];
     };
   };
 }
