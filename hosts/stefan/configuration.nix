@@ -24,6 +24,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
+  haze.user = "haze";
 
   environment.systemPackages = with pkgs; [
   ];

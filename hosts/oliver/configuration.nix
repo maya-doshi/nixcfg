@@ -30,6 +30,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
+  haze.user = "haze";
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

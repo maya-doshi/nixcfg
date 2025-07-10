@@ -1,5 +1,9 @@
 { config, lib, pkgs, ... }: {
   options.haze = {
+    user = lib.mkOption {
+      type = lib.types.str;
+      description = "main user";
+    };
     devices.qudelix5k.enable = lib.mkEnableOption "Qudelix 5K Bluetooth UDEV rules";
     services = {
       syncthing.enable = lib.mkEnableOption "Syncthing - File Sync";

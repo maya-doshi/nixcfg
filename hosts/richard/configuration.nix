@@ -30,5 +30,6 @@
     description = "maya";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
   };
+  haze.user = "maya";
 
 }

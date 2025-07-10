@@ -39,5 +39,6 @@
     description = "maya";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker" ];
   };
+  haze.user = "maya";
 
 }
