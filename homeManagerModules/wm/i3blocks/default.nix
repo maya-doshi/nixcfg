@@ -3,11 +3,11 @@
 {
   config = lib.mkIf config.haze.windowManager.i3blocks.enable {
     home.file = {
-      ".config/i3blocks/scripts/battery.sh" = {
+      ".config/i3blocks/scripts/battery.sh" = lib.mkIf (!config.haze.isDesktop) {
         source = ./scripts/battery.sh;
         executable = true;
       };
-      ".config/i3blocks/scripts/brightness.sh" = {
+      ".config/i3blocks/scripts/brightness.sh" = lib.mkIf (!config.haze.isDesktop) {
         source = ./scripts/brightness.sh;
         executable = true;
       };
@@ -40,25 +40,29 @@
             interval = 60;
           };
 
-          brightness = lib.hm.dag.entryAfter [ "network" ] {
-            command = "~/.config/i3blocks/scripts/brightness.sh";
-            interval = "once";
-            signal = 11;
-          };
+          brightness = lib.mkIf (!config.haze.isDesktop) (
+            lib.hm.dag.entryAfter [ "network" ] {
+              command = "~/.config/i3blocks/scripts/brightness.sh";
+              interval = "once";
+              signal = 11;
+            }
+          );
 
-          volume = lib.hm.dag.entryAfter [ "brightness" ] {
+          volume = lib.hm.dag.entryAfter [ "brightness" "network" ] {
             command = "~/.config/i3blocks/scripts/volume.sh";
             interval = 60;
             signal = 10;
           };
 
-          battery = lib.hm.dag.entryAfter [ "volume" ] {
-            command = "~/.config/i3blocks/scripts/battery.sh";
-            interval = 60;
-            signal = 12;
-          };
+          battery = lib.mkIf (!config.haze.isDesktop) (
+            lib.hm.dag.entryAfter [ "volume" ] {
+              command = "~/.config/i3blocks/scripts/battery.sh";
+              interval = 60;
+              signal = 12;
+            }
+          );
 
-          datetime = lib.hm.dag.entryAfter [ "battery" ] {
+          datetime = lib.hm.dag.entryAfter [ "battery" "volume" ] {
             command = "date '+%Y-%m-%d %I:%M %p'";
             interval = 60;
             signal = 13;

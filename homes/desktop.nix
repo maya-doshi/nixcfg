@@ -16,10 +16,21 @@
     fuzzel.enable = true;
   };
 
+  haze.isDesktop = true;
   haze.windowManager.sway.enable = true;
 
   wayland.windowManager.sway = {
     extraOptions = [ "--unsupported-gpu" ];
+    config.output = {
+      "DP-1" = {
+        mode = "3840x2160@60.0Hz";
+        pos = "0 0";
+        transform = "normal";
+        scale = "1.50";
+        adaptive_sync = "on";
+        dpms = "on";
+      };
+    };
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

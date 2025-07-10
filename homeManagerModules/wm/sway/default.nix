@@ -149,36 +149,7 @@
           };
         };
 
-        output = {
-          "eDP-1" = {
-            mode = "2880x1800@90.001Hz";
-            pos = "2560 0";
-            transform = "normal";
-            scale = "1.50";
-            adaptive_sync = "off";
-            dpms = "on";
-          };
-          "DP-1" = {
-            mode = "3840x2160@60.0Hz";
-            pos = "0 0";
-            transform = "normal";
-            scale = "1.50";
-            adaptive_sync = "off";
-            dpms = "on";
-          };
-          "DP-2" = {
-            mode = "3840x2160@60.0Hz";
-            pos = "0 0";
-            transform = "normal";
-            scale = "1.50";
-            adaptive_sync = "off";
-            dpms = "on";
-          };
-
-          "*" = {
-            bg = "~/Pictures/Wallpapers/new-wallpaper.png fill";
-          };
-        };
+        output."*".bg = "~/Pictures/Wallpapers/new-wallpaper.png fill";
 
         up = "k";
         down = "j";

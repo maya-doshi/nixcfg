@@ -18,5 +18,6 @@
       sway.enable = lib.mkEnableOption "Enable SwayWM";
       i3blocks.enable = lib.mkEnableOption "Enable i3blocks";
     };
+    isDesktop = lib.mkEnableOption "are u using a desktop";
   };
 }
