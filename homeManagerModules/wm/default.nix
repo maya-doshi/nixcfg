@@ -7,5 +7,6 @@
   imports = [
     ./i3blocks
     ./sway
+    ./swaync
   ];
 }

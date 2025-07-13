@@ -64,7 +64,6 @@
 
       # sway stuff
       sway-contrib.grimshot
-      swaynotificationcenter
       brightnessctl
       acpi
       wirelesstools

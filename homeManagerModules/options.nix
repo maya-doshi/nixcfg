@@ -17,6 +17,7 @@
     windowManager = {
       sway.enable = lib.mkEnableOption "Enable SwayWM";
       i3blocks.enable = lib.mkEnableOption "Enable i3blocks";
+      swaync.enable = lib.mkEnableOption "Enable SwayNC - Notification Center";
     };
     isDesktop = lib.mkEnableOption "are u using a desktop";
   };

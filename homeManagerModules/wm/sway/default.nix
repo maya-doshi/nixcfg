@@ -8,6 +8,7 @@
 {
   config = lib.mkIf config.haze.windowManager.sway.enable {
     haze.windowManager.i3blocks.enable = true;
+    haze.windowManager.swaync.enable = true;
     wayland.windowManager.sway = let
       mod = "Mod4";
       term = "footclient";
