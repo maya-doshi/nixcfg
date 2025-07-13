@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     
     home-manager = {
@@ -21,11 +22,21 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, sops-nix, nixos-hardware, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, sops-nix, nixos-hardware, ... }:
     let
       lib = nixpkgs.lib;
+      system = "x86_64-linux";
+
 
       overlays = [
+        (
+          final: prev: {
+            unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          }
+        )
         (import ./overlays/mpv.nix)
       ];
 
