@@ -7,8 +7,34 @@
 
 {
   config = lib.mkIf config.haze.windowManager.sway.enable {
-    haze.windowManager.i3blocks.enable = true;
-    haze.windowManager.swaync.enable = true;
+    haze.apps = {
+      sioyek.enable = true;
+      zathura.enable = true;
+      foot.enable = true;
+      mpv.enable = true;
+      fuzzel.enable = true;
+    };
+
+    haze.windowManager = {
+      i3blocks.enable = true;
+      swaync.enable = true;
+    };
+
+    home.packages = with pkgs; [
+      sway-contrib.grimshot
+      brightnessctl
+      acpi
+      wirelesstools
+      playerctl
+      pwvucontrol
+      swaylock
+      wl-clipboard
+      nwg-displays
+      wdisplays
+      yazi
+    ];
+
+
     wayland.windowManager.sway = let
       mod = "Mod4";
       term = "footclient";

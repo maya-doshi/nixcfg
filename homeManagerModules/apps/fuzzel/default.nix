@@ -2,6 +2,7 @@
 
 {
   config = lib.mkIf config.haze.apps.fuzzel.enable {
+    home.packages = [ pkgs.rofimoji ];
     programs.fuzzel = {
       enable = true;
       settings = {

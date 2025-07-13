@@ -62,22 +62,8 @@
       signal-desktop
       vesktop
 
-      # sway stuff
-      sway-contrib.grimshot
-      brightnessctl
-      acpi
-      wirelesstools
-      playerctl
-      pwvucontrol
-      rofimoji
-      swaylock
-      wl-clipboard
-      nwg-displays
-      imv
-      wdisplays
-      yazi
-
       # misc
+      imv
       ungoogled-chromium
       man-pages
       man-pages-posix
