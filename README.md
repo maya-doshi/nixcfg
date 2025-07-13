@@ -1,7 +1,7 @@
-# Maya's NixOS Flake
+# maya's flake
 :D
 
-sway config is very minimal visually, dont care to "rice" too much
+mostly super minimal configs
 
 ---
 
@@ -9,10 +9,10 @@ sway config is very minimal visually, dont care to "rice" too much
 
 ---
 
-## Hosts
-| Name     | Role                                                                      | Model                                                       |
-| -------- | ------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| logan    | main laptop                                                               | UN5401 \[R5 5600H\]                                         |
-| richard  | secondary laptop                                                          | X220 \[i5-2520\]                                            |
-| oliver   | desktop                                                                   | custom \[5600x - 3060ti\]                                |
-| stefan   | server (power supply blew up and destroyed debian, migration in progress) | old gaming pc (no gpu) \[i5 7600\]                          |
+## hosts
+| name     | role             | model                              |
+| -------- | ---------------- | ---------------------------------- |
+| logan    | main laptop      | un5401 \[r5-5600h\]                |
+| richard  | secondary laptop | x220 \[i5-2520\]                   |
+| oliver   | desktop          | custom \[r5-5600x - 3060ti\]       |
+| stefan   | server           | old gaming pc (no gpu) \[i5 7600\] |
