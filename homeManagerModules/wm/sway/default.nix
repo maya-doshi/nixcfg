@@ -32,6 +32,7 @@
       nwg-displays
       wdisplays
       yazi
+      xwayland-satellite
     ];
 
 
