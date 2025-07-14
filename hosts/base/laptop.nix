@@ -18,25 +18,16 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  environment.gnome.excludePackages = ( with pkgs; [
-    gnome-photos
-    gnome-tour
-    gnome-text-editor
-    gnome-console
-    epiphany
-    yelp
-    gnome-contacts
-    simple-scan
-    geary
-    gnome-music
-    gnome-characters
-    gnome-maps
-    totem
-  ]);
+  # services.xserver.displayManager.gdm.enable = true;
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions --remember-session";
+        user = "greeter";
+      };
+    };
+  };
 
   environment.sessionVariables.NIXOS_OZONE_WL="1";
   environment.sessionVariables.GOPATH="$HOME/.local/share/go";
@@ -158,6 +149,22 @@
     virt-manager
     dive # look into docker image layers
     sshfs
+
+    # gnome stuff
+    glib
+    snapshot
+    gnome-calendar
+    gnome-clocks
+    nautilus
+    file-roller
+    gnome-calculator
+    gnome-online-accounts
+    gnome-online-accounts-gtk
+    gnome-connections
+    gnome-keyring
+    loupe
+    adwaita-icon-theme
+    adwaita-icon-theme-legacy
   ];
 
   haze.devices.qudelix5k.enable = true;
