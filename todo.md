@@ -1,7 +1,0 @@
-- [X] Variables
-  - [X] Username variables everywhere instead of "maya"
-  - [X] Remove all hardcoded stuff
-- [X] Move stefan from current debian install to nixos
-- [X] Strip out big gnome package and replace with only needed gnome packages
-- [X] Sway
-  - [X] Add all required programs for swaycfg in module
