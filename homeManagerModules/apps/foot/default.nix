@@ -10,7 +10,7 @@
           term = "xterm-256color";
           shell = "fish";
           font = config.haze.apps.foot.font;
-          dpi-aware = "no";
+          dpi-aware = "yes";
           workers = 12;
         };
         mouse = {
