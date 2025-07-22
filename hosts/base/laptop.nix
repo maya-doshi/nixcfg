@@ -51,6 +51,8 @@
     #media-session.enable = true;
   };
 
+  services.upower.enable = true;
+
   virtualisation.containers.enable = true;
   virtualisation = {
     libvirtd.enable = true;
@@ -149,6 +151,7 @@
     virt-manager
     dive # look into docker image layers
     sshfs
+    upower
 
     # gnome stuff
     glib
