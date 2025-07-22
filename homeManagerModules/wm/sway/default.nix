@@ -45,6 +45,7 @@
       clipboard = "wl-copy";
       emoji = "rofimoji --selector '${menu}' --clipboarder '${clipboard}'";
       todo = "io.github.alainm23.planify.quick-add";
+      notification-panel = "swaync-client -op";
 
       up = "k";
       down = "j";
@@ -287,6 +288,8 @@
           "${mod}+space" = "focus mode_toggle";
 
           "${mod}+r" = "mode \"resize\"";
+
+          "${mod}+q" = "exec ${notification-panel}";
         };
 
         modes = {
