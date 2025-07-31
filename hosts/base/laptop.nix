@@ -170,7 +170,10 @@
     adwaita-icon-theme-legacy
   ];
 
-  haze.devices.qudelix5k.enable = true;
+  haze.devices = {
+    qudelix5k.enable = true;
+    k3Pro.enable = true;
+  };
 
   haze.services = {
     emacs.enable = true;
