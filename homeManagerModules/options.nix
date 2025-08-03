@@ -5,7 +5,7 @@
         enable = lib.mkEnableOption "foot - Terminal";
         font = lib.mkOption {
           type = lib.types.str;
-          default = "IosevkaTerm NF:size=7";
+          default = "IosevkaTerm NF:size=12";
           description = "Font name and size for foot terminal";
         };
       };
