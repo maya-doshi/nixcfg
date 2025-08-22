@@ -29,6 +29,8 @@
     };
   };
 
+  services.gvfs.enable = true;
+
   environment.sessionVariables.NIXOS_OZONE_WL="1";
   environment.sessionVariables.GOPATH="$HOME/.local/share/go";
 
