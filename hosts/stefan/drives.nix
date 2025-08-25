@@ -22,7 +22,7 @@
       ];
     };
     "/mnt/old/250GB/bonus" = {
-      device = "/dev/disk/by-uuid/0e86f96e-6391-4d34-ae65-6433400ac39f";
+      device = "/dev/disk/by-partuuid/1da29dd6-02";
       fsType = "btrfs";
       options = [
         "nofail"
