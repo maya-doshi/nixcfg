@@ -27,6 +27,7 @@
   haze.user = "haze";
 
   environment.systemPackages = with pkgs; [
+    gnome-keyring
   ];
 
   services = {
