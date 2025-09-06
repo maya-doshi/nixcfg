@@ -15,7 +15,7 @@
     };
 
     "/mnt/old/250GB/boot" = {
-      device = "/dev/disk/by-uuid/77b313c9-abf8-4471-bf49-55c8a9abd492";
+      device = "/dev/disk/by-partuuid/1da29dd6-02";
       fsType = "ext4";
       options = [
         "nofail"
