@@ -3,4 +3,5 @@ final: prev: {
   plex = prev.unstable.plex;
   navidrome = prev.unstable.navidrome;
   memos = prev.unstable.memos;
+  karakeep = prev.unstable.karakeep;
 }
