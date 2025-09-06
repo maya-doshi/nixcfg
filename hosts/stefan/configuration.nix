@@ -83,6 +83,29 @@
         METRICS_ALLOWED_NETWORKS = "100.0.0.0/8";
       };
     };
+
+    karakeep = {
+      enable = true;
+      browser.enable = true;
+      browser.port = 9222;
+      meilisearch.enable = true;
+      extraEnvironment = {
+        PORT = "9223";
+        DISABLE_SIGNUPS = "true";
+        DISABLE_NEW_RELEASE_CHECK = "true";
+        DB_WAL_MODE = "true";
+        ASSETS_DIR = "/mnt/old/250GB/bonus/appdata/karakeep/assets";
+
+        CRAWLER_FULL_PAGE_ARCHIVE = "true";
+
+        SMTP_SECURE = "true";
+
+        OPENAI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta";
+        INFERENCE_TEXT_MODEL = "gemini-2.5-flash";
+        INFERENCE_IMAGE_MODEL = "gemini-2.5-flash";
+      };
+      environmentFile = "/mnt/old/250GB/bonus/appdata/karakeep/secrets.env";
+    };
   };
 
   haze.services = {
