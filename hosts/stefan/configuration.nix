@@ -66,7 +66,7 @@
         Address = "0.0.0.0";
         Port = 4533;
         EnableInsightsCollector = true;
-        MusicFolder = "/mnt/old/4TB/4TB/Music/";
+        MusicFolder = "/mnt/goliath/stor/Music";
       };
       openFirewall = true;
       environmentFile = "/mnt/old/250GB/bonus/appdata/navidrome/env";
