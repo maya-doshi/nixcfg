@@ -71,6 +71,18 @@
       openFirewall = true;
       environmentFile = "/mnt/old/250GB/bonus/appdata/navidrome/env";
     };
+
+    miniflux = {
+      enable = true;
+      createDatabaseLocally = true;
+      adminCredentialsFile = "/mnt/old/250GB/bonus/appdata/miniflux/admin-creds";
+      config = {
+        CLEANUP_FREQUENCY = 48;
+        LISTEN_ADDR = "0.0.0.0:3245";
+        METRICS_COLLECTOR=1;
+        METRICS_ALLOWED_NETWORKS = "100.0.0.0/8";
+      };
+    };
   };
 
   haze.services = {
