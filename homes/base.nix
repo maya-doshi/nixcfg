@@ -39,10 +39,12 @@
       tectonic
       pandoc
       texliveSmall
+      libreoffice-qt6-fresh
 
       # music
       nicotine-plus
       spotify
+      spotify-player
       strawberry
       plexamp
       shortwave
