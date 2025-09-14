@@ -7,7 +7,7 @@
 
   config = lib.mkIf config.haze.services.nextcloud.enable {
     networking.firewall =  {
-      allowedTCPPorts = [ 8666 8667 ];
+      allowedTCPPorts = [ 8666 ];
     };
 
     virtualisation.oci-containers.containers."mariadb" = {
@@ -55,8 +55,7 @@
         "/mnt/old/4TB/4TB/Music:/music:ro"
       ];
       ports = [
-        "8667:80"
-        "8666:443/tcp"
+        "100.125.122.35:8666:443/tcp"
       ];
       dependsOn = [
         "mariadb"
