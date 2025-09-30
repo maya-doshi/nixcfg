@@ -45,6 +45,8 @@
     picard
   ];
 
+  programs.fuse.userAllowOther = true;
+
   services = {
     plex = {
       enable = true;
