@@ -35,7 +35,14 @@
   haze.user = "haze";
 
   environment.systemPackages = with pkgs; [
-    gnome-keyring
+    sshfs
+    waypipe
+    rclone
+    pass
+    python3
+    ffmpeg-full
+    mediainfo
+    picard
   ];
 
   services = {
