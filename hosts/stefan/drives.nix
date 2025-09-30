@@ -29,6 +29,14 @@
       ];
     };
 
+   "/mnt/old/1TB"  ={
+     device = "/dev/disk/by-uuid/03d0c2e4-3dc3-4b68-b130-951a0b077b6a";
+     fsType = "btrfs";
+     options = [
+       "nofail"
+     ];
+   };
+
    "/mnt/old/4TB"  ={
      device = "/dev/disk/by-uuid/1cf6b2ad-86a8-42e9-9174-245145d8ce18";
      fsType = "btrfs";
