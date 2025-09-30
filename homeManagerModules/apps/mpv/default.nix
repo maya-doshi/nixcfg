@@ -10,7 +10,7 @@
           mpv = pkgs.mpv-unwrapped;
 
           scripts = with pkgs.mpvScripts; [
-            dynamic-crop
+            # dynamic-crop
             thumbfast
             mpv-cheatsheet
             uosc
