@@ -8,6 +8,7 @@
 
   environment.systemPackages = with pkgs; [
     age
+    nh
     btop
     fish
     wget
