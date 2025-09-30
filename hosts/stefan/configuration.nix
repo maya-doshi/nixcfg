@@ -118,4 +118,9 @@
     docker.enable = true;
     nextcloud.enable = true;
   };
+
+  zramSwap = {
+    enable = true;
+    memoryPercent = 50;
+  };
 }
