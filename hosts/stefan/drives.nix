@@ -1,6 +1,9 @@
 { config, lib, pkgs, modulesPath, ... }:
 {
-  boot.supportedFilesystems = [ "nfs" ];
+  boot.supportedFilesystems = [
+    "nfs"
+    "zfs"
+  ];
   services.rpcbind.enable = true;
 
   fileSystems = {

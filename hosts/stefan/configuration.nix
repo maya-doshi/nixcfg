@@ -12,7 +12,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "stefan";
+  networking = {
+    hostName = "stefan";
+    hostId = "bc0e4252";
+  };
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -40,8 +43,6 @@
     mediainfo
     picard
   ];
-
-  programs.fuse.userAllowOther = true;
 
   services = {
     plex = {
