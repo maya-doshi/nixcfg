@@ -35,11 +35,7 @@
   haze.user = "haze";
 
   environment.systemPackages = with pkgs; [
-    sshfs
-    waypipe
-    rclone
     pass
-    python3
     ffmpeg-full
     mediainfo
     picard

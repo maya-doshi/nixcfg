@@ -7,8 +7,20 @@
     ];
 
   environment.systemPackages = with pkgs; [
-    vim
+    openssl
     tmux
+    sshfs
+    waypipe
+    rclone
+    python3
+    tlrc
+    ripgrep
+    hdparm
+    smartmontools
+    pciutils
+    usbutils
+    lshw
+    p7zip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -17,6 +29,14 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
+  };
+
+  programs.fuse.userAllowOther = true;
+
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
   };
 
   services = {
