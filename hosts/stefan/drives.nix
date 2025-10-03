@@ -18,7 +18,7 @@
     };
 
     "/mnt/old/250GB/boot" = {
-      device = "/dev/disk/by-partuuid/1da29dd6-02";
+      device = "/dev/disk/by-uuid/77b313c9-abf8-4471-bf49-55c8a9abd492";
       fsType = "ext4";
       options = [
         "nofail"
@@ -32,7 +32,7 @@
       ];
     };
 
-   "/mnt/old/1TB"  ={
+   "/mnt/old/1TB" = {
      device = "/dev/disk/by-uuid/03d0c2e4-3dc3-4b68-b130-951a0b077b6a";
      fsType = "btrfs";
      options = [
@@ -40,17 +40,15 @@
      ];
    };
 
-   "/mnt/old/4TB"  ={
-     device = "/dev/disk/by-uuid/1cf6b2ad-86a8-42e9-9174-245145d8ce18";
+   "/mnt/old/5TB" = {
+     device = "/dev/disk/by-uuid/9dd0854f-3b10-4553-9a56-a2d6ad97764d";
      fsType = "btrfs";
      options = [
        "nofail"
+       "compress=zstd:15"
+       "noatime"
      ];
    };
 
-   "/mnt/old/5TB"  ={
-     device = "/dev/disk/by-uuid/3E8E57D38E5781F7";
-     fsType = "ntfs";
-   };
   };
 }
