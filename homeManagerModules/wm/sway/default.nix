@@ -168,12 +168,12 @@
           };
 
           "1267:11830:ELAN9008:00_04F3:2E36" = {
-            events = "disabled";
+            events = "enabled";
             map_to_output = "eDP-1";
           };
 
           "1267:11830:ELAN9008:00_04F3:2E36_Stylus" = {
-            events = "disabled";
+            events = "enabled";
             map_to_output = "eDP-1";
           };
         };
