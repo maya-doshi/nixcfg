@@ -24,18 +24,27 @@
   users.users = {
     haze = {
       isNormalUser = true;
-      description = "haze";
       extraGroups = [ "networkmanager" "wheel" ];
       packages = with pkgs; [];
     };
     pine = {
       isNormalUser = true;
-      description = "0xcad";
-      home = "/mnt/goliath/stor/0xcad";
-      openssh.authorizedKeys.keys = [ "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDhRFxpA7Ik6Gy8wwPq3SJrRCRLIXubWbbgzTO4ea7TsOBHhEgpU0dqqNcm3ON6WKMbnmrGD54jYURR4qXg3sqlC+SViSKmgyRt0EJBUcprZBIOvUshMQVtODaDgPMMGTSQCqc2ALDuUGdCClYYMSmwGDi9Q97YjpWChSeBcfxlaQpwY8KaU6IF/G1uu0NtkTJWmNOxDqAKiAPjLlLAMGi/AdIfNCmeACionYPVRI2mjaF9L+tUxW60I4cO3YiGAaum6lM4bJuVZtEqvBz0IQj2FFgUwyEsLwYrkfHR0f6q8X2hG/Zg6d6TTvmBIBnemofxypm7xc6R0jCJDoEE9OlUTpvltYiSRrizJdGsJJOLGBvhd6eAkPxjt5cVwEnr1R+svykyol6UorSB/w8T1w8u8dAwB28kxy4V2stZH1uo+kaF3bH57+8T3mkXJxC00BBfH077Mql1tgoR9gfh2r42U45AjHfUjuvfVISDUI46wlptrlgKnIug0kl5TJ0ESCE= pine@venus" ];
+      createHome = true;
+      home = "/home/pine";
+      useDefaultShell = true;
+      group = "pine";
+      uid = 1001;
+      openssh.authorizedKeys.keys = [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDhRFxpA7Ik6Gy8wwPq3SJrRCRLIXubWbbgzTO4ea7TsOBHhEgpU0dqqNcm3ON6WKMbnmrGD54jYURR4qXg3sqlC+SViSKmgyRt0EJBUcprZBIOvUshMQVtODaDgPMMGTSQCqc2ALDuUGdCClYYMSmwGDi9Q97YjpWChSeBcfxlaQpwY8KaU6IF/G1uu0NtkTJWmNOxDqAKiAPjLlLAMGi/AdIfNCmeACionYPVRI2mjaF9L+tUxW60I4cO3YiGAaum6lM4bJuVZtEqvBz0IQj2FFgUwyEsLwYrkfHR0f6q8X2hG/Zg6d6TTvmBIBnemofxypm7xc6R0jCJDoEE9OlUTpvltYiSRrizJdGsJJOLGBvhd6eAkPxjt5cVwEnr1R+svykyol6UorSB/w8T1w8u8dAwB28kxy4V2stZH1uo+kaF3bH57+8T3mkXJxC00BBfH077Mql1tgoR9gfh2r42U45AjHfUjuvfVISDUI46wlptrlgKnIug0kl5TJ0ESCE= pine@venus"
+      ];
     };
   };
   haze.user = "haze";
+
+  users.groups.pine = {
+    name = "pine";
+    members = [ "pine" "haze" ];
+  };
 
   environment.systemPackages = with pkgs; [
     pass

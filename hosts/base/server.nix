@@ -40,7 +40,10 @@
   };
 
   services = {
-    openssh.enable = true;
+    openssh = {
+      enable = true;
+      settings.PermitRootLogin = "no";
+    };
     tailscale = {
       enable = true;
       useRoutingFeatures = "both";
