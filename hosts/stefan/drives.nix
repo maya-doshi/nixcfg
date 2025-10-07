@@ -4,7 +4,16 @@
     "nfs"
     "zfs"
   ];
+
   services.rpcbind.enable = true;
+
+  services.zfs = {
+    autoScrub = {
+      enable = true;
+      pools = [ "elena" ];
+      interval = "monthly";
+    };
+  };
 
   fileSystems = {
     "/mnt/goliath" = {
@@ -17,6 +26,21 @@
       ];
     };
 
+    "/mnt/elena" = {
+      device = "elena";
+      fsType = "zfs";
+    };
+
+    "/mnt/elena/media" = {
+      device = "elena/media";
+      fsType = "zfs";
+    };
+
+    "/mnt/elena/0xcad" = {
+      device = "elena/0xcad";
+      fsType = "zfs";
+    };
+
     "/mnt/old/250GB/boot" = {
       device = "/dev/disk/by-uuid/77b313c9-abf8-4471-bf49-55c8a9abd492";
       fsType = "ext4";
@@ -24,6 +48,7 @@
         "nofail"
       ];
     };
+
     "/mnt/old/250GB/bonus" = {
       device = "/dev/disk/by-partuuid/1da29dd6-02";
       fsType = "btrfs";
