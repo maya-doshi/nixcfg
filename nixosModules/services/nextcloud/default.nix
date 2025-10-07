@@ -51,8 +51,7 @@
       ];
       volumes = [
         "/mnt/old/250GB/bonus/appdata/nextcloud/main:/config:rw"
-        "/mnt/old/4TB/4TB/Nextcloud:/data:rw"
-        "/mnt/old/4TB/4TB/Music:/music:ro"
+        "/mnt/old/5TB/Nextcloud:/data:rw"
       ];
       ports = [
         "100.125.122.35:8666:443/tcp"
