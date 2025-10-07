@@ -36,6 +36,7 @@
 
       # docs
       obsidian
+      logseq
       tectonic
       pandoc
       texliveSmall
