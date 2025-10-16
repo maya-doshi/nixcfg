@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     # CAD
     kicad
+    zoom-us
 
     # Handwriting
     xournalpp
