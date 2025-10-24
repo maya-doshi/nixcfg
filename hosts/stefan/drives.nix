@@ -36,25 +36,14 @@
       fsType = "zfs";
     };
 
-    "/mnt/elena/0xcad" = {
-      device = "elena/0xcad";
+    "/mnt/elena/safe" = {
+      device = "elena/safe";
       fsType = "zfs";
     };
 
-    "/mnt/old/250GB/boot" = {
-      device = "/dev/disk/by-uuid/77b313c9-abf8-4471-bf49-55c8a9abd492";
-      fsType = "ext4";
-      options = [
-        "nofail"
-      ];
-    };
-
-    "/mnt/old/250GB/bonus" = {
-      device = "/dev/disk/by-partuuid/1da29dd6-02";
-      fsType = "btrfs";
-      options = [
-        "nofail"
-      ];
+    "/mnt/elena/0xcad" = {
+      device = "elena/0xcad";
+      fsType = "zfs";
     };
 
    "/mnt/old/1TB" = {

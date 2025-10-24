@@ -56,41 +56,39 @@
   services = {
     plex = {
       enable = true;
-      dataDir = "/mnt/old/250GB/bonus/appdata/plex/";
       openFirewall = true;
     };
 
     tautulli = {
       enable = true;
-      dataDir = "/mnt/old/250GB/bonus/appdata/tautulli/";
-      configFile = "/mnt/old/250GB/bonus/appdata/tautulli/config.ini";
+      dataDir = "/var/lib/tautulli/";
+      configFile = "/var/lib/tautulli/config.ini";
       openFirewall = true;
       port = 8181;
     };
 
     kavita = {
       enable = true;
-      dataDir = "/mnt/old/250GB/bonus/appdata/kavita/";
-      tokenKeyFile = "/mnt/old/250GB/bonus/appdata/kavita/tokenKey";
+      tokenKeyFile = "/var/lib/kavita/tokenKey";
       settings.Port = 5000;
     };
 
     navidrome = {
       enable = true;
       settings = {
-        Address = "0.0.0.0";
+        Address = "100.125.122.35";
         Port = 4533;
         EnableInsightsCollector = true;
-        MusicFolder = "/mnt/goliath/stor/Music";
+        MusicFolder = "/mnt/elena/media/music";
       };
       openFirewall = true;
-      environmentFile = "/mnt/old/250GB/bonus/appdata/navidrome/env";
+      environmentFile = "/var/lib/navidrome/env";
     };
 
     miniflux = {
       enable = true;
       createDatabaseLocally = true;
-      adminCredentialsFile = "/mnt/old/250GB/bonus/appdata/miniflux/admin-creds";
+      adminCredentialsFile = "/var/lib/miniflux/admin-creds";
       config = {
         CLEANUP_FREQUENCY = 48;
         LISTEN_ADDR = "0.0.0.0:3245";
@@ -109,7 +107,7 @@
         DISABLE_SIGNUPS = "true";
         DISABLE_NEW_RELEASE_CHECK = "true";
         DB_WAL_MODE = "true";
-        ASSETS_DIR = "/mnt/old/250GB/bonus/appdata/karakeep/assets";
+        ASSETS_DIR = "/var/lib/karakeep/assets";
 
         CRAWLER_FULL_PAGE_ARCHIVE = "true";
 
@@ -119,19 +117,18 @@
         INFERENCE_TEXT_MODEL = "gemini-2.5-flash";
         INFERENCE_IMAGE_MODEL = "gemini-2.5-flash";
       };
-      environmentFile = "/mnt/old/250GB/bonus/appdata/karakeep/secrets.env";
+      environmentFile = "/var/lib/karakeep/secrets.env";
     };
   };
 
   haze.services = {
     memos = {
       enable = true;
-      dataDir = "/mnt/old/250GB/bonus/appdata/memos/";
       openFirewall = true;
     };
 
     docker.enable = true;
-    nextcloud.enable = true;
+    nextcloud.enable = false;
   };
 
   zramSwap = {
