@@ -13,10 +13,10 @@
     virtualisation.oci-containers.containers."mariadb" = {
       image = "lscr.io/linuxserver/mariadb:latest";
       volumes = [
-        "/mnt/old/250GB/bonus/appdata/nextcloud/db:/config:rw"
+        "/mnt/old/5TB/appdata/nextcloud/db:/config:rw"
       ];
       environmentFiles = [
-        "/mnt/old/250GB/bonus/appdata/nextcloud/db.env"
+        "/mnt/old/5TB/appdata/nextcloud/db.env"
       ];
       log-driver = "journald";
       extraOptions = [
@@ -47,10 +47,10 @@
     virtualisation.oci-containers.containers."nextcloud" = {
       image = "lscr.io/linuxserver/nextcloud:latest";
       environmentFiles = [
-        "/mnt/old/250GB/bonus/appdata/nextcloud/nextcloud.env"
+        "/mnt/old/5TB/appdata/nextcloud/nextcloud.env"
       ];
       volumes = [
-        "/mnt/old/250GB/bonus/appdata/nextcloud/main:/config:rw"
+        "/mnt/old/5TB/appdata/nextcloud/main:/config:rw"
         "/mnt/old/5TB/Nextcloud:/data:rw"
       ];
       ports = [

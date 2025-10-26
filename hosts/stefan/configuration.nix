@@ -128,7 +128,7 @@
     };
 
     docker.enable = true;
-    nextcloud.enable = false;
+    nextcloud.enable = true;
   };
 
   zramSwap = {
