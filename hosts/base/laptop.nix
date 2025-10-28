@@ -33,6 +33,21 @@
 
   services.gvfs.enable = true;
 
+  services.keyd = {
+    enable = true;
+
+    keyboards.default = {
+      ids = [ "*" ];
+      settings = {
+        main = {
+          capslock = "overload(control, esc)";
+          leftshift = "overload(shift, kpleftparen)";
+          rightshift = "overload(shift, kprightparen)";
+        };
+      };
+    };
+  };
+
   environment.sessionVariables.NIXOS_OZONE_WL="1";
   environment.sessionVariables.GOPATH="$HOME/.local/share/go";
 
@@ -82,9 +97,8 @@
   programs.appimage = {
     enable = true;
     binfmt = true;
-  }
+  };
 
-  # Install neovim
   programs.neovim = {
     enable = true;
     defaultEditor = true;
