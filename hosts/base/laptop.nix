@@ -57,8 +57,8 @@
 
   services.upower.enable = true;
 
-  virtualisation.containers.enable = true;
   virtualisation = {
+    containers.enable = true;
     libvirtd.enable = true;
     docker = {
       enable = true;
@@ -67,6 +67,7 @@
         setSocketVariable = true;
       };
     };
+    waydroid.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -77,6 +78,11 @@
     sway.enable = true;
     niri.enable = true;
   };
+
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  }
 
   # Install neovim
   programs.neovim = {
