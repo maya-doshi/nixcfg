@@ -1,12 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./drives.nix
-      ../base/server.nix
-    ];
+  disabledModules = [ "services/web-apps/kavita.nix" ];
+  imports = [
+    ./hardware-configuration.nix
+    ./drives.nix
+    ../base/server.nix
+    ../../overlays/kavita-service.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
