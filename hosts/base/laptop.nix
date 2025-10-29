@@ -43,6 +43,16 @@
           capslock = "overload(control, esc)";
           leftshift = "overload(shift, kpleftparen)";
           rightshift = "overload(shift, kprightparen)";
+          f = "lettermod(f, f, 150, 200)";
+        };
+        "f" = {
+          e = "macro(maya-doshi@proton.me)";
+          s = "command(systemctl suspend)";
+
+          h = "left";
+          j = "down";
+          k = "up";
+          l = "right";
         };
       };
     };
