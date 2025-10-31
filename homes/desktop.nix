@@ -70,7 +70,6 @@
 
   programs = {
     home-manager.enable = true; # Let Home Manager install and manage itself.
-    zen-browser.enable = true;
   };
 
   # services.emacs = {

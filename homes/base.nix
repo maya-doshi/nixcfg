@@ -87,7 +87,6 @@
 
   imports = [
     ../homeManagerModules
-    self.inputs.zen-browser.homeModules.default
   ];
 
   haze.apps = {
@@ -106,6 +105,5 @@
 
   programs = {
     home-manager.enable = true; # Let Home Manager install and manage itself.
-    zen-browser.enable = true;
   };
 }
