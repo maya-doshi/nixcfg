@@ -38,26 +38,26 @@
   services.gvfs.enable = true;
 
   services.keyd = {
-    enable = true;
+    enable = false;
 
     keyboards.default = {
       ids = [ "*" ];
       settings = {
         main = {
           capslock = "overload(control, esc)";
-          leftshift = "overload(shift, kpleftparen)";
-          rightshift = "overload(shift, kprightparen)";
-          f = "lettermod(f, f, 150, 200)";
+          # leftshift = "overload(shift, kpleftparen)";
+          # rightshift = "overload(shift, kprightparen)";
+          # f = "lettermod(f, f, 150, 200)";
         };
-        "f" = {
-          e = "macro(maya-doshi@proton.me)";
-          s = "command(systemctl suspend)";
-
-          h = "left";
-          j = "down";
-          k = "up";
-          l = "right";
-        };
+        # "f" = {
+        #   e = "macro(maya-doshi@proton.me)";
+        #   s = "command(systemctl suspend)";
+        #
+        #   h = "left";
+        #   j = "down";
+        #   k = "up";
+        #   l = "right";
+        # };
       };
     };
   };

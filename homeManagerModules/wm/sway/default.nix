@@ -156,6 +156,10 @@
         seat."*".xcursor_theme = "Adwaita 24";
 
         input = {
+          "type:keyboard" = {
+            xkb_options = "ctrl:nocaps";
+          };
+
           "type:touchpad" = {
             dwt = "enabled";
             tap = "enabled";
@@ -171,6 +175,14 @@
           "1267:11830:ELAN9008:00_04F3:2E36_Stylus" = {
             events = "disabled";
             map_to_output = "eDP-1";
+          };
+
+          "1267:12729:ASUE140D:00_04F3:31B9_Mouse" = {
+            events = "disabled";
+          };
+
+          "type:touch" = {
+            events = "disabled";
           };
         };
 
