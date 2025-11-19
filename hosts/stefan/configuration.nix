@@ -122,12 +122,20 @@
         ASSETS_DIR = "/var/lib/karakeep/assets";
 
         CRAWLER_FULL_PAGE_ARCHIVE = "true";
+        CRAWLER_ENABLE_ADBLOCKER = "true";
+        CRAWLER_VIDEO_DOWNLOAD = "true";
+        CRAWLER_VIDEO_DOWNLOAD_MAX_SIZE= "-1";
 
-        SMTP_SECURE = "true";
+        SMTP_SECURE = "false";
+
+        INFERENCE_ENABLE_AUTO_SUMMARIZATION = "false";
 
         OPENAI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta";
-        INFERENCE_TEXT_MODEL = "gemini-2.5-flash";
+        INFERENCE_TEXT_MODEL = "gemini-2.5-flash-lite";
         INFERENCE_IMAGE_MODEL = "gemini-2.5-flash";
+        INFERENCE_CONTEXT_LENGTH = "16384";
+        INFERENCE_MAX_OUTPUT_TOKENS = "16384";
+        INFERENCE_JOB_TIMEOUT_SEC = "60";
       };
       environmentFile = "/var/lib/karakeep/secrets.env";
     };
