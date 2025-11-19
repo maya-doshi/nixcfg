@@ -7,9 +7,6 @@
       ../../nixosModules
     ];
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "mbedtls-2.28.10"
-  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
