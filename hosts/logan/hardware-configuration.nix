@@ -13,16 +13,10 @@
   boot.kernelModules = [ "kvm-amd" "amd-gpu" "zenpower" "msr" "i2c-dev" ];
   boot.extraModulePackages = [ ];
 
-  hardware.graphics = {
-    ## radv: an open-source Vulkan driver from freedesktop
-    enable32Bit = true;
-
-    ## amdvlk: an open-source Vulkan driver from AMD
-    extraPackages = [pkgs.amdvlk];
-    extraPackages32 = [pkgs.driversi686Linux.amdvlk];
+  hardware = {
+    graphics.enable32Bit = true;
+    logitech.wireless.enable = true;
   };
-
-  hardware.logitech.wireless.enable = true;
 
   services.xserver.videoDrivers = ["amdgpu"];
 
