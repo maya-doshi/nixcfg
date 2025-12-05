@@ -16,16 +16,6 @@
   };
 
   fileSystems = {
-    "/mnt/goliath" = {
-      device = "172.24.97.48:mnt/goliath/maya-test";
-      fsType = "nfs";
-      options = [
-        "nfsvers=4.2"
-        "default"
-        "nofail"
-      ];
-    };
-
     "/mnt/elena" = {
       device = "elena";
       fsType = "zfs";
@@ -46,14 +36,6 @@
       fsType = "zfs";
     };
 
-   "/mnt/old/1TB" = {
-     device = "/dev/disk/by-uuid/03d0c2e4-3dc3-4b68-b130-951a0b077b6a";
-     fsType = "btrfs";
-     options = [
-       "nofail"
-     ];
-   };
-
    "/mnt/old/5TB" = {
      device = "/dev/disk/by-uuid/9dd0854f-3b10-4553-9a56-a2d6ad97764d";
      fsType = "btrfs";
@@ -63,6 +45,5 @@
        "noatime"
      ];
    };
-
   };
 }
