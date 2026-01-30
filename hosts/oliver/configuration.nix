@@ -21,7 +21,7 @@
   networking.hostName = "oliver"; # Define your hostname.
 
   # Set your time zone.
-  time.timeZone = "America/New_York";
+  time.timeZone = "America/Los_Angeles";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.haze = {

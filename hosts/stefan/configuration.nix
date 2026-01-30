@@ -18,7 +18,7 @@
     hostId = "bc0e4252";
   };
 
-  time.timeZone = "America/New_York";
+  time.timeZone = "America/Los_Angeles";
 
   users = {
     groups = {
