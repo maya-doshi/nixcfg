@@ -19,7 +19,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # services.xserver.displayManager.gdm.enable = true;
   services.greetd = {
     enable = true;
     settings = {
@@ -143,6 +142,7 @@
   environment.systemPackages = with pkgs; [
     # web
     firefox
+    ungoogled-chromium
 
     # file management
     rclone
@@ -155,6 +155,31 @@
     python3
     git
     onefetch
+    cmake
+    lazygit
+    gh
+    gnumake
+    helix
+    neovim
+    vim
+    fd
+    fzf
+    pkg-config
+    tree-sitter
+    luajit
+    luarocks
+    clangStdenv
+    ocaml
+    opam
+    rustup
+    gcc
+    ghc
+    go
+    nodejs
+    pnpm
+    nil
+    vscode
+    zed-editor
 
     # cli
     fish
@@ -167,6 +192,7 @@
     fzf
     zoxide
     tmux
+    imv
 
     # media
     pulseaudio
@@ -187,6 +213,55 @@
     dive # look into docker image layers
     sshfs
     upower
+    man-pages
+    man-pages-posix
+    unzip
+    dig
+    nmap
+    usbutils
+    p7zip
+    nfs-utils
+    libnotify
+    file
+
+    # security
+    authenticator
+    bitwarden-desktop
+    gnupg1
+
+    # audio
+    qpwgraph
+
+    # docs
+    obsidian
+    logseq
+    tectonic
+    xournalpp
+
+    # music
+    feishin
+    nicotine-plus
+    picard
+
+    # image
+    exiftool
+    gimp
+    imagemagick
+    libwebp
+
+    # communication
+    thunderbird
+    telegram-desktop
+    signal-desktop
+
+    # fonts
+    liberation_ttf
+    times-newer-roman
+
+    # media
+    calibre
+    plex-mpv-shim
+    obs-studio
 
     # gnome stuff
     glib

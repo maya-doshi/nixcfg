@@ -4,21 +4,9 @@
   imports = [ ./laptop.nix ];
 
   home.packages = with pkgs; [
-    # CAD
-    kicad
-    zoom-us
-
-    # Handwriting
-    xournalpp
-
-    # Dev
-    vscode
-    zed-editor
-
     # misc
     ryzenadj
     ryzen-monitor-ng
-    obs-studio
   ];
 
   wayland.windowManager.sway.config.output = {
