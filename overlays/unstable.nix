@@ -1,4 +1,5 @@
 final: prev: {
+  feishin = prev.unstable.feishin;
   xwayland-satellite = prev.unstable.xwayland-satellite;
   plex = prev.unstable.plex;
   navidrome = prev.unstable.navidrome;
