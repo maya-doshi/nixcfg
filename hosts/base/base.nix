@@ -2,9 +2,16 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ../../nixosModules
     ];
+
+  services = {
+    openssh = {
+      enable = true;
+      settings.PermitRootLogin = "no";
+    };
+  };
 
   environment.systemPackages = with pkgs; [
     age
@@ -24,12 +31,10 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # Enable networking
   networking.networkmanager.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Select internationalisation properties.
   i18n = {
     defaultLocale = "en_US.UTF-8";
     extraLocaleSettings = {
@@ -45,12 +50,10 @@
     };
   };
 
-  # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
-
 
   programs.nix-ld.enable = true;
 

@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./base.nix
     ];
 
@@ -40,10 +40,6 @@
   };
 
   services = {
-    openssh = {
-      enable = true;
-      settings.PermitRootLogin = "no";
-    };
     tailscale = {
       enable = true;
       useRoutingFeatures = "both";
