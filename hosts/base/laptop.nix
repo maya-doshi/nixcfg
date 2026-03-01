@@ -46,7 +46,6 @@
 
   virtualisation = {
     containers.enable = true;
-    libvirtd.enable = true;
     docker = {
       enable = true;
       rootless = {
@@ -187,7 +186,7 @@
     gnupg1
 
     # audio
-    qpwgraph
+    helvum
 
     # docs
     obsidian
