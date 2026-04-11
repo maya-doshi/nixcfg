@@ -19,18 +19,4 @@ final: prev: {
       ];
     });
   });
-  tautulli = prev.unstable.tautulli.overrideAttrs (old: {
-    patches = (old.patches or []) ++ [
-      (final.fetchpatch {
-        url = "https://github.com/maya-doshi/Tautulli/commit/7d2384c072dfdd0255b6d17f06cd3af74d63c077.patch";
-        hash = "sha256-vw0Qq7hqdUx1bVRxXqEneaNKE1vlDSlwLrtoUnfX8aE=";
-      })
-    ];
-    propagatedBuildInputs = (old.propagatedBuildInputs or []) ++ [
-      final.python313Packages.pylast
-    ];
-    pythonPath = (old.pythonPath or []) ++ [
-      final.python313Packages.pylast
-    ];
-  });
 }
