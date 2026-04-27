@@ -7,8 +7,6 @@
     ./hardware-configuration.nix
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   time.timeZone = "America/Los_Angeles";
 
   networking.hostName = "logan";
