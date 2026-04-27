@@ -107,7 +107,6 @@
     adw-gtk3
 
     # code
-    cargo
     python3
     git
     onefetch
@@ -124,9 +123,7 @@
     tree-sitter
     luajit
     luarocks
-    clangStdenv
-    ocaml
-    opam
+    clang
     rustup
     gcc
     ghc
