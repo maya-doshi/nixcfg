@@ -31,6 +31,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  programs.ccache.enable = true;
+
   networking.networkmanager.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
