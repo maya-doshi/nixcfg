@@ -141,6 +141,12 @@
       environment.N8N_SECURE_COOKIE = "false";
     };
 
+    baikal = {
+      enable = true;
+      virtualHost = "cd.k4x.club";
+    };
+
+    nginx.virtualHosts."cd.k4x.club".listen = [ { addr = "100.125.122.35"; port = 8765; } ]; # tailscale ip of stefan
   };
 
   haze.services = {
@@ -150,7 +156,6 @@
     };
 
     docker.enable = true;
-    nextcloud.enable = true;
   };
 
   zramSwap = {
