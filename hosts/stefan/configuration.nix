@@ -1,12 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  disabledModules = [ "services/web-apps/kavita.nix" ];
   imports = [
     ./hardware-configuration.nix
     ./drives.nix
     ../base/server.nix
-    ../../overlays/kavita-service.nix
   ];
 
 
@@ -77,13 +75,6 @@
       port = 8181;
     };
 
-    kavita = {
-      enable = true;
-      group = "media";
-      tokenKeyFile = "/var/lib/kavita/tokenKey";
-      settings.Port = 5000;
-    };
-
     navidrome = {
       enable = true;
       settings = {
@@ -95,6 +86,10 @@
       group = "media";
       openFirewall = true;
       environmentFile = "/var/lib/navidrome/env";
+      plugins = with pkgs.navidromePlugins; [
+        apple-music
+        listenbrainz-daily-playlist
+      ];
     };
 
     miniflux = {
