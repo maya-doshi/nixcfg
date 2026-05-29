@@ -4,6 +4,7 @@
     "nfs"
     "zfs"
   ];
+  boot.zfs.forceImportRoot = false;
 
   services.rpcbind.enable = true;
 
