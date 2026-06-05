@@ -103,7 +103,7 @@ in
           in
           "!${preStartScript}";
 
-        ExecStart = "${cfg.package}/bin/memos --mode prod --port ${toString cfg.port} --data ${cfg.dataDir}";
+        ExecStart = "${cfg.package}/bin/memos --port ${toString cfg.port} --data ${cfg.dataDir}";
         KillSignal = "SIGQUIT";
         Restart = "on-failure";
 
