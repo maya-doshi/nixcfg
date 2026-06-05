@@ -3,7 +3,6 @@
     ./docker
     ./emacs
     ./memos
-    ./nextcloud
     ./syncthing
     ./tailscale
   ];
