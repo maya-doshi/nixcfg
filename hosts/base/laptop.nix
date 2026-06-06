@@ -181,6 +181,7 @@
     authenticator
     bitwarden-desktop
     gnupg1
+    bubblewrap
 
     # audio
     crosspipe
