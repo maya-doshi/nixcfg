@@ -183,7 +183,7 @@
     gnupg1
 
     # audio
-    helvum
+    crosspipe
 
     # docs
     obsidian

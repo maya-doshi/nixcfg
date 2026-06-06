@@ -14,7 +14,7 @@
         "search_highlight_color" = "#7ec16e";
         "status_bar_color" = "#8ec07c";
         "status_bar_text_color" = "#282828";
-        "startup_commands" = "toggle_custom_color";
+        "startup_commands" = [ "toggle_custom_color" ];
       };
       bindings = {
         "next_page;goto_top_of_page" = "J";

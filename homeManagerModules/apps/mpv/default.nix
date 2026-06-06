@@ -6,13 +6,11 @@
       enable = true;
 
       package = (
-        pkgs.mpv-unwrapped.wrapper {
-          mpv = pkgs.mpv-unwrapped;
-
+        pkgs.mpv.override {
           scripts = with pkgs.mpvScripts; [
             # dynamic-crop
             thumbfast
-            mpv-cheatsheet
+            mpv-cheatsheet-ng
             uosc
             sponsorblock
             quality-menu
