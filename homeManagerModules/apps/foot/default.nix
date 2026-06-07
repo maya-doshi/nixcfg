@@ -16,8 +16,7 @@
         mouse = {
           hide-when-typing = "yes";
         };
-        # TODO: Change to declarative themeing
-        colors = {
+        colors-dark = {
           alpha="0.9";
           background="282828";
           foreground="ebdbb2";
