@@ -10,9 +10,10 @@ mostly super minimal configs
 ---
 
 ## hosts
-| name     | role             | model                              |
-| -------- | ---------------- | ---------------------------------- |
-| logan    | main laptop      | un5401 \[r5-5600h\]                |
-| richard  | secondary laptop | x220 \[i5-2520\]                   |
-| oliver   | desktop          | custom \[r9-5900x - 3060ti\]       |
-| stefan   | server           | old gaming pc (no gpu) \[i5 7600\] |
+| name     | role             | model                        |
+| -------- | ---------------- | ---------------------------- |
+| logan    | main laptop      | un5401 \[r5-5600h\]          |
+| richard  | secondary laptop | x220 \[i5-2520\]             |
+| oliver   | desktop          | custom \[r5-5600x - 3060ti\] |
+| stefan   | server           | custom \[r9-5900x\]          |
+| unnamed  | htpc             | custom \[i5-7600\]           |
