@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./options.nix
+    ./desktop
     ./devices
     ./services
     ./gaming

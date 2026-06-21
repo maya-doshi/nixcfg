@@ -1,0 +1,1 @@
+output "DP-1" mode 3840x2160@60.0Hz position 0 0 transform normal scale 1.50 adaptive_sync on dpms on

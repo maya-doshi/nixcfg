@@ -76,6 +76,8 @@
 
   security.polkit.enable = true;
 
+  haze.desktop.enable = true;
+
   environment.sessionVariables = {
     NIXOS_OZONE_WL="1";
     GOPATH="$HOME/.local/share/go";

@@ -1,0 +1,27 @@
+[music]
+command=~/.config/i3blocks/scripts/now_playing.sh
+interval=15
+
+[network]
+command=~/.config/i3blocks/scripts/network.sh
+interval=60
+
+[brightness]
+command=~/.config/i3blocks/scripts/brightness.sh
+interval=once
+signal=11
+
+[volume]
+command=~/.config/i3blocks/scripts/volume.sh
+interval=60
+signal=10
+
+[battery]
+command=~/.config/i3blocks/scripts/battery.sh
+interval=60
+signal=12
+
+[datetime]
+command=date '+%Y-%m-%d %I:%M %p'
+interval=60
+signal=13
