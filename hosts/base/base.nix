@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./cachix.nix
       ../../nixosModules
     ];
 
