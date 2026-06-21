@@ -60,6 +60,8 @@
     picard
   ];
 
+  virtualisation.podman.enable = true;
+
   services = {
     plex = {
       enable = true;

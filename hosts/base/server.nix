@@ -21,6 +21,7 @@
     usbutils
     lshw
     p7zip
+    podman-compose
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
