@@ -180,7 +180,6 @@
 
     # security
     authenticator
-    bitwarden-desktop
     gnupg1
     bubblewrap
 
