@@ -13,11 +13,23 @@ concurrency:
 
 jobs:
   build:
-    name: Build systems
+    name: Build ${{ matrix.name }}
     runs-on: ubuntu-latest
     env:
       CACHIX_CACHE_NAME: ${{ vars.CACHIX_CACHE_NAME }}
       CACHIX_AUTH_TOKEN: ${{ secrets.CACHIX_AUTH_TOKEN }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: server
+            command: nix build .#nixosConfigurations.stefan.config.system.build.toplevel
+          - name: desktop
+            command: |
+              nix build \
+                .#nixosConfigurations.logan.config.system.build.toplevel \
+                .#nixosConfigurations.richard.config.system.build.toplevel \
+                .#nixosConfigurations.oliver.config.system.build.toplevel
 
     steps:
       - name: Checkout
@@ -37,9 +49,4 @@ jobs:
           authToken: ${{ env.CACHIX_AUTH_TOKEN }}
 
       - name: Build system
-        run: |
-          nix build \
-            .#nixosConfigurations.logan.config.system.build.toplevel \
-            .#nixosConfigurations.richard.config.system.build.toplevel \
-            .#nixosConfigurations.oliver.config.system.build.toplevel \
-            .#nixosConfigurations.stefan.config.system.build.toplevel
+        run: ${{ matrix.command }}
