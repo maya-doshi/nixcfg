@@ -16,7 +16,10 @@
     hostId = "bc0e4252";
     nftables.enable = true;
     firewall.trustedInterfaces = [ "incusbr0" ];
-    firewall.allowedTCPPorts = [ 8443 ];
+    firewall.allowedTCPPorts = [
+      8443 # incus
+      8765 # baikal
+    ];
   };
 
   time.timeZone = "America/Los_Angeles";
