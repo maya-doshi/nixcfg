@@ -14,6 +14,9 @@
   networking = {
     hostName = "stefan";
     hostId = "bc0e4252";
+    nftables.enable = true;
+    firewall.trustedInterfaces = [ "incusbr0" ];
+    firewall.allowedTCPPorts = [ 8443 ];
   };
 
   time.timeZone = "America/Los_Angeles";
@@ -32,7 +35,7 @@
     users = {
       haze = {
         isNormalUser = true;
-        extraGroups = [ "networkmanager" "wheel" "media" ];
+        extraGroups = [ "networkmanager" "wheel" "media" "incus-admin" ];
         packages = with pkgs; [];
       };
       pine = {
@@ -60,7 +63,14 @@
     picard
   ];
 
-  virtualisation.podman.enable = true;
+  virtualisation = {
+    podman.enable = true;
+
+    incus = {
+      enable = true;
+      ui.enable = true;
+    };
+  };
 
   services = {
     plex = {
