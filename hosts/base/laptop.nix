@@ -176,6 +176,7 @@
     nfs-utils
     libnotify
     file
+    chiri
 
     # security
     authenticator

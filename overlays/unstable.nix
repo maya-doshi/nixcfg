@@ -6,6 +6,7 @@ final: prev: {
   memos = prev.unstable.memos;
   karakeep = prev.unstable.karakeep;
   baikal = prev.unstable.baikal;
+  chiri = prev.unstable.chiri;
   kavita = prev.kavita.overrideAttrs (old: {
     backend = old.backend.overrideAttrs (oldBackend: {
       patches = (oldBackend.patches or []) ++ [
