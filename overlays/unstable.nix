@@ -4,7 +4,6 @@ final: prev: {
   plex = prev.unstable.plex;
   navidrome = prev.unstable.navidrome;
   memos = prev.unstable.memos;
-  karakeep = prev.unstable.karakeep;
   baikal = prev.unstable.baikal;
   chiri = prev.unstable.chiri;
   kavita = prev.kavita.overrideAttrs (old: {
