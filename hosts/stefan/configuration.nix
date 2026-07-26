@@ -23,6 +23,7 @@
     firewall.allowedTCPPorts = [
       8443 # incus
       8765 # baikal
+      9223 # karakeep
     ];
   };
 
