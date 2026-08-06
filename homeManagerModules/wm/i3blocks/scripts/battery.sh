@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-info=$(acpi -b)
+info=$(acpi -b | head -n 1)
 percent=$(echo "$info" | grep -oP '[0-9]+(?=%)')
 status=$(echo "$info" | awk '{print $3}' | tr -d ',')
 
