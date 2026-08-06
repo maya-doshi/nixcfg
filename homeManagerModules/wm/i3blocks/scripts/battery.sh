@@ -34,5 +34,5 @@ if [ "$percent" -le 10 ]; then
 fi
 
 case "$BLOCK_BUTTON" in
-    1) notify-send "Battery Info" "$(acpi -b)" ;;
+    1) notify-send "Battery Info" "$info" ;;
 esac
