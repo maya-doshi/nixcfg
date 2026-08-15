@@ -24,6 +24,7 @@
       8443 # incus
       8765 # baikal
       9223 # karakeep
+      5000 # tailnet tidaler webui
       4391 # misc
     ];
   };
