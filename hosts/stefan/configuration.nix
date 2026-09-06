@@ -173,6 +173,7 @@
     qui = {
       enable = true;
       openFirewall = true;
+      secretFile = "/var/lib/qui/session-secret.txt";
       settings.port = 7476;
     };
   };
