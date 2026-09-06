@@ -174,7 +174,10 @@
       enable = true;
       openFirewall = true;
       secretFile = "/var/lib/qui/session-secret.txt";
-      settings.port = 7476;
+      settings = {
+        host = "100.125.122.35";
+        port = 7476;
+      };
     };
   };
 
