@@ -169,16 +169,6 @@
     };
 
     nginx.virtualHosts."cd.k4x.club".listen = [ { addr = "100.125.122.35"; port = 8765; } ]; # tailscale ip of stefan
-
-    qui = {
-      enable = true;
-      openFirewall = true;
-      secretFile = "/var/lib/qui/session-secret.txt";
-      settings = {
-        host = "100.125.122.35";
-        port = 7476;
-      };
-    };
   };
 
   haze.services = {
