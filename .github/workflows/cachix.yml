@@ -26,10 +26,7 @@ jobs:
             command: nix build .#nixosConfigurations.stefan.config.system.build.toplevel
           - name: desktop
             command: |
-              nix build \
-                .#nixosConfigurations.logan.config.system.build.toplevel \
-                .#nixosConfigurations.richard.config.system.build.toplevel \
-                .#nixosConfigurations.oliver.config.system.build.toplevel
+              nix build .#nixosConfigurations.logan.config.system.build.toplevel
 
     steps:
       - name: Checkout
