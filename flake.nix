@@ -15,9 +15,14 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    noctalia = {
+      url = "github:maya-doshi/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, sops-nix, nixos-hardware, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, sops-nix, nixos-hardware, noctalia, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -44,6 +49,7 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/logan/configuration.nix
+            noctalia.nixosModules.default
             home-manager.nixosModules.home-manager {
               home-manager.extraSpecialArgs = {inherit self;};
               home-manager.useGlobalPkgs = true;
@@ -59,6 +65,7 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/richard/configuration.nix
+            noctalia.nixosModules.default
             home-manager.nixosModules.home-manager {
               home-manager.extraSpecialArgs = {inherit self;};
               home-manager.useGlobalPkgs = true;
@@ -76,6 +83,7 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/oliver/configuration.nix
+            noctalia.nixosModules.default
             home-manager.nixosModules.home-manager {
               home-manager.extraSpecialArgs = {inherit self;};
               home-manager.useGlobalPkgs = true;

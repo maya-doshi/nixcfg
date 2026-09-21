@@ -62,6 +62,10 @@
   # So it shows up in the display manager?
   programs = {
     sway.enable = true;
+    noctalia = {
+      enable = true;
+      recommendedServices.enable = true;
+    };
   };
 
   programs.appimage = {

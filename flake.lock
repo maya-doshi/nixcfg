@@ -81,12 +81,33 @@
         "type": "indirect"
       }
     },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790022752,
+        "narHash": "sha256-igM0cjseZKyRHkHFhPTh7YIJPjuzvLl5wbwoO8Sg4Bw=",
+        "owner": "maya-doshi",
+        "repo": "noctalia",
+        "rev": "d42d0b23c44a423d83cd17cd35846ada6835449e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "maya-doshi",
+        "repo": "noctalia",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "noctalia": "noctalia",
         "sops-nix": "sops-nix"
       }
     },

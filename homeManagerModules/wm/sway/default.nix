@@ -15,11 +15,6 @@
       fuzzel.enable = true;
     };
 
-    haze.windowManager = {
-      i3blocks.enable = true;
-      swaync.enable = true;
-    };
-
     home.packages = with pkgs; [
       sway-contrib.grimshot
       brightnessctl
@@ -27,7 +22,6 @@
       wirelesstools
       playerctl
       pwvucontrol
-      swaylock
       wl-clipboard
       nwg-displays
       wdisplays
@@ -45,7 +39,7 @@
       clipboard = "wl-copy";
       emoji = "rofimoji --selector '${menu}' --clipboarder '${clipboard}'";
       todo = "io.github.alainm23.planify.quick-add";
-      notification-panel = "swaync-client -op";
+      notification-panel = "noctalia msg panel-toggle control-center notifications";
 
       up = "k";
       down = "j";
@@ -57,7 +51,6 @@
       screenshot_all = "grimshot --notify copy screen";
       screenshot_all_save = "grimshot --notify save screen";
 
-      notify = "swaync";
     in {
       enable = true;
       wrapperFeatures.gtk = true;
@@ -70,7 +63,7 @@
 
         startup = [
           {command = "${termServer}";}
-          {command = "${notify}";}
+          {command = "noctalia";}
         ];
 
         window = {
@@ -125,33 +118,7 @@
           };
         };
 
-        bars = [
-          {
-            fonts =  {
-              names = [ "JetBrains Mono Nerd Font" ];
-              style = "Regular";
-              size = 9.0;
-            };
-            position = "top";
-            colors = {
-              background = "#282828";
-              focusedWorkspace = {
-                background = "#8EC07C";
-                border = "#8EC07C";
-                text = "#282828";
-              };
-              inactiveWorkspace = {
-                background = "#282828";
-                border = "#282828";
-                text = "#ebdbb2";
-              };
-              statusline = "#ebdbb2";
-            };
-            extraConfig =
-              "workspace_min_width 25\n" +
-              "status_command i3blocks";
-          }
-        ];
+        bars = [];
 
         seat."*".xcursor_theme = "Adwaita 24";
 
@@ -354,16 +321,14 @@
       };
 
       extraConfig = let
-        brightness_signal = "pkill -SIGRTMIN+11 i3blocks";
-        brightness_up   = "brightnessctl set 5%+ && ${brightness_signal}";
-        brightness_down = "brightnessctl set 5%- && ${brightness_signal}";
+        brightness_up   = "noctalia msg brightness-up";
+        brightness_down = "noctalia msg brightness-down";
 
-        vol_signal = "pkill -SIGRTMIN+10 i3blocks";
-        vol_mute = "pactl set-sink-mute @DEFAULT_SINK@ toggle && ${vol_signal}";
-        vol_up   = "pactl set-sink-volume @DEFAULT_SINK@ +5%  && ${vol_signal}";
-        vol_down = "pactl set-sink-volume @DEFAULT_SINK@ -5%  && ${vol_signal}";
+        vol_mute = "noctalia msg volume-mute";
+        vol_up   = "noctalia msg volume-up";
+        vol_down = "noctalia msg volume-down";
 
-        lock = "swaylock -c \"#1e1e2e\" --ring-color \"#D2ABDB\" | systemctl suspend";
+        lock = "noctalia msg session lock-and-suspend";
       in ''
         bindsym --locked XF86MonBrightnessUp exec ${brightness_up}
         bindsym --locked XF86MonBrightnessDown exec ${brightness_down}
