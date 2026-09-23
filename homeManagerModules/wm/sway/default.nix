@@ -1,10 +1,5 @@
 { config, lib, pkgs, ... }:
 
-# TODO:
-# - [ ] Move sway stuff packages in here
-# - [ ] Import foot and other modules in here
-# - [ ] Bind extra keys
-
 {
   config = lib.mkIf config.haze.windowManager.sway.enable {
     haze.apps = {
@@ -321,8 +316,8 @@
       };
 
       extraConfig = let
-        brightness_up   = "noctalia msg brightness-up";
-        brightness_down = "noctalia msg brightness-down";
+        brightness_up   = "brightnessctl set 5%+";
+        brightness_down = "brightnessctl set 5%-";
 
         vol_mute = "noctalia msg volume-mute";
         vol_up   = "noctalia msg volume-up";

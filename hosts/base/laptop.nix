@@ -43,10 +43,12 @@
     pulse.enable = true;
     # jack.enable = true;
   };
-
+  services.gnome.gnome-keyring.enable = true;
   services.upower.enable = true;
+  services.dbus.enable = true;
 
   security.rtkit.enable = true;
+  security.pam.services.greetd.enableGnomeKeyring = true;
 
   virtualisation = {
     containers.enable = true;
@@ -57,6 +59,11 @@
         setSocketVariable = true;
       };
     };
+  };
+
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
   };
 
   # So it shows up in the display manager?
