@@ -38,6 +38,7 @@
           }
         )
         (import ./overlays/mpv.nix)
+        (import ./overlays/signal-monochrome.nix)
         (import ./overlays/unstable.nix)
       ];
 
