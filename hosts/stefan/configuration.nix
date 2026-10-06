@@ -157,6 +157,14 @@
       environmentFile = "/var/lib/karakeep/secrets.env";
     };
 
+    audiobookshelf = {
+      enable = true;
+      group = "media";
+      host = "0.0.0.0";
+      port = 9428;
+      openFirewall = true;
+    };
+
     n8n = {
       enable = true;
       openFirewall = true;
