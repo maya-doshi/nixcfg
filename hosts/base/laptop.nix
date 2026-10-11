@@ -66,9 +66,14 @@
     wlr.enable = true;
   };
 
-  # So it shows up in the display manager?
   programs = {
-    sway.enable = true;
+    sway = {
+      enable = true;
+      wrapperFeatures.gtk = true;
+      extraSessionCommands = ''
+        export WLR_RENDERER=vulkan
+      '';
+    };
     noctalia = {
       enable = true;
       recommendedServices.enable = true;

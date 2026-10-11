@@ -48,7 +48,7 @@
 
     in {
       enable = true;
-      wrapperFeatures.gtk = true;
+      package = null; # Use the NixOS Sway wrapper, including its Vulkan renderer setting.
       checkConfig = false; # TODO: remove this once you figure out how to set the wallpaper properly
       systemd.enable = true;
       config = {
