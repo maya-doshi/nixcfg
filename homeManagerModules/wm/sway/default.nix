@@ -29,7 +29,7 @@
       mod = "Mod4";
       term = "footclient";
       termServer = "foot --server";
-      web = "firefox";
+      web = "firefox-esr";
       menu = "fuzzel";
       clipboard = "wl-copy";
       emoji = "rofimoji --selector '${menu}' --clipboarder '${clipboard}'";
