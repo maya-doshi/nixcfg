@@ -123,7 +123,7 @@
 
   environment.systemPackages = with pkgs; [
     # web
-    firefox-esr
+    firefox
     ungoogled-chromium
 
     # file management
