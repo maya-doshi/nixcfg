@@ -165,6 +165,15 @@
       openFirewall = true;
     };
 
+    pinchflat = {
+      enable = true;
+      port = 8945;
+      group = "media";
+      mediaDir = "/mnt/elena/media/youtube";
+      openFirewall = true;
+      secretsFile = "/var/lib/pinchflat/secrets";
+    };
+
     n8n = {
       enable = true;
       openFirewall = true;
