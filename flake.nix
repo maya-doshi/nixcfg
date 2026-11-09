@@ -100,6 +100,10 @@
           system = "x86_64-linux";
           modules = [
             ./hosts/stefan/configuration.nix
+            {
+              disabledModules = [ "services/web-apps/rustical.nix" ];
+              imports = [ "${nixpkgs-unstable}/nixos/modules/services/web-apps/rustical.nix" ];
+            }
             sops-nix.nixosModules.sops
             { nixpkgs.overlays = overlays; }
           ];
