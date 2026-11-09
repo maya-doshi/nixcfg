@@ -5,6 +5,7 @@ final: prev: {
   memos = prev.unstable.memos;
   baikal = prev.unstable.baikal;
   chiri = prev.unstable.chiri;
+  rustical = prev.unstable.rustical;
   kavita = prev.kavita.overrideAttrs (old: {
     backend = old.backend.overrideAttrs (oldBackend: {
       patches = (oldBackend.patches or []) ++ [
