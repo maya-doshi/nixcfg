@@ -185,6 +185,11 @@
       virtualHost = "cd.k4x.club";
     };
 
+    rustical = {
+      enable = true;
+      settings.http.port = 4000;
+    };
+
     nginx.virtualHosts."cd.k4x.club".listen = [ { addr = "100.125.122.35"; port = 8765; } ]; # tailscale ip of stefan
   };
 
